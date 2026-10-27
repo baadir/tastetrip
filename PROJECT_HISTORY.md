@@ -834,3 +834,5 @@ Bir karar değiştiğinde önceki kaydı yeniden yazmak yerine yeni kayıtta “
 
 - H-078 yayın doğrulaması: e28b404237a7d95ff864433b42a7c99109d85966 GitHub main push edildi ve Coolify zpgwg0n9kadp58gw0ixdinen build kaynağı bu SHA olarak doğrulandı; Deployment is Finished. Canlı ayrı tarayıcı oturumunda Show my itinerary → English yanıt → English aksiyon → English hata kartı ve toast doğrulandı. Kanıt: artifacts/deployment/tastetrip-all-english-live-2026-10-28.png. Coolify Running bağlantısının commit etiketi eski SHA gösteriyordu; sürüm kanıtı import logu ve canlı değişen UI davranışıdır.
 - Yerel 8080 Python sunucusu hedef PID doğrulanarak yeniden başlatıldı; mevcut veri klasörü korundu. Test oturumları ayrı artifacts/localization/qa-data DB kullandı. Üretimde yalnız sentetik rota sorgusu yapıldı, profil beğenisi/hesap/rezervasyon/telefon oluşturulmadı.
+
+- H-078 son tarama: yerel ses test modülündeki dört kullanıcıya yansıyabilen doğrulama hatası da İngilizceye çevrildi; Türkçe gerçek telefon senaryosu/ses metinleri çok dilli özellik olarak korundu.

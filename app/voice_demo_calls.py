@@ -61,21 +61,21 @@ class DemoCalls:
         if scenario not in ("restaurant_demo", ANNA["id"]):
             raise ValueError("Bilinmeyen arama senaryosu.")
         if not re.fullmatch(r"[A-Za-z0-9_-]{16,80}", key):
-            raise ValueError("Geçersiz arama girişimi.")
+            raise ValueError("Invalid call attempt.")
         target = ANNA["target"] if scenario == ANNA["id"] else self.value("TWILIO_TEST_TO_NUMBER")
         caller = self.value("TWILIO_FROM_NUMBER")
         origin = self.value("VOICE_PUBLIC_URL").rstrip("/")
         if not all(re.fullmatch(r"\+[1-9][0-9]{7,14}", x or "") for x in (target, caller)) or target == caller or not origin.startswith("https://"):
-            raise ValueError("Test numarası veya ses bağlantısı yapılandırılmamış.")
+            raise ValueError("The test number or voice connection is not configured.")
         if not all(self.value(k) for k in ("TWILIO_ACCOUNT_SID", "TWILIO_AUTH_TOKEN", "DEEPGRAM_API_KEY", "ELEVENLABS_API_KEY", ("ELEVENLABS_VOICE_ID_EN" if scenario == ANNA["id"] else "ELEVENLABS_VOICE_ID_TR"), "LLM_API_KEY", "LLM_MODEL", "LLM_BASE_URL")):
-            raise ValueError("Konuşma servislerinin yapılandırması eksik.")
+            raise ValueError("Voice service configuration is incomplete.")
         with self.db() as db:
             db.execute("BEGIN IMMEDIATE")
             row = db.execute("SELECT * FROM calls WHERE id=?", (key,)).fetchone()
             if row: return self.public(row)
             active = db.execute("SELECT * FROM calls ORDER BY created DESC LIMIT 1").fetchone()
             if active and active[2] not in TERMINAL:
-                raise ValueError("Bir arama sürüyor veya önceki sonucun kontrolü gerekiyor.")
+                raise ValueError("A call is in progress or the previous result needs review.")
             db.execute("INSERT INTO calls (id,sid,status,created) VALUES (?,NULL,'starting',?)", (key, time.time()))
         # Commit the attempt BEFORE sending the single non-retried provider POST.
         twiml = '<Response><Connect><Stream url=' + quoteattr(origin.replace("https://", "wss://", 1) + '/twilio/media') + '><Parameter name="mode" value="' + scenario + '"/></Stream></Connect><Hangup/></Response>'
