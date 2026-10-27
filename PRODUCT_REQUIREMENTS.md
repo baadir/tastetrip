@@ -270,3 +270,7 @@ Güncel sözleşme: docs/ux/10-complete-conversation.md. Önceki yardımcı form
 
 ### 28 Ekim 2026 — D-035: Karşılama ve sohbet dili
 İlk ekran ve karşılama İngilizcedir. Asistan son kullanıcı mesajının dilinde yanıt verir; açık dil değişikliği isteği önceliklidir. Belirsiz kısa mesajlarda önceki konuşma dili, ilk temasta İngilizce kullanılır. Mesaj dili native/altyazı tercihini otomatik değiştirmez. Eski konuşmalar yeniden çevrilmez. Yardımcı işlem kartlarının tam yerelleştirmesi ayrıca ele alınacaktır.
+
+
+### 28 Ekim 2026 — D-036: İngilizce uygulama metinleri
+D-035 sonundaki yardımcı kartların daha sonra çevrileceği sınırı kaldırıldı. Tüm sabit uygulama metinleri, kart/aksiyon etiketleri, erişilebilir açıklamalar ve servis hata mesajları İngilizcedir. Asistan son mesaj dilinde yanıt verir; önceki konuşma dili ancak dil bakımından belirsiz girişlerde kullanılır. Dil yönlendirmesi ayrı hafif LLM çağrısıyla yapılır; native/altyazı tercihini değiştirmez. Kalıcı enum kimlikleri korunur ve İngilizce etiketle gösterilir. Kullanıcı içeriği ve eski sohbet kayıtları silinmez.

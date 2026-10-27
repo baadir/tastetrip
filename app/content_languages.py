@@ -14,9 +14,9 @@ from urllib.parse import urljoin, urlsplit
 
 from defusedxml import ElementTree
 
-LANGUAGES = {'tr': 'Türkçe', 'en': 'İngilizce', 'de': 'Almanca', 'fr': 'Fransızca',
-             'es': 'İspanyolca', 'it': 'İtalyanca', 'pt': 'Portekizce', 'ar': 'Arapça',
-             'ru': 'Rusça', 'ja': 'Japonca', 'ko': 'Korece', 'zh': 'Çince', 'nl': 'Felemenkçe'}
+LANGUAGES = {'tr': 'Turkish', 'en': 'English', 'de': 'German', 'fr': 'French',
+             'es': 'Spanish', 'it': 'Italian', 'pt': 'Portuguese', 'ar': 'Arabic',
+             'ru': 'Russian', 'ja': 'Japanese', 'ko': 'Korean', 'zh': 'Chinese', 'nl': 'Dutch'}
 ALIASES = {'turkish': 'tr', 'türkçe': 'tr', 'tur': 'tr', 'english': 'en', 'eng': 'en',
            'german': 'de', 'deu': 'de', 'ger': 'de', 'french': 'fr', 'fra': 'fr',
            'spanish': 'es', 'spa': 'es', 'italian': 'it', 'ita': 'it', 'portuguese': 'pt',
@@ -155,7 +155,7 @@ def lookup_podcast_language(itunes_id, cache_dir):
                 result['apple_url'] = apple
             language = read_public(item['feedUrl'], rss=True) if item.get('feedUrl') else None
             if language:
-                result.update(language=language, language_source='RSS · yayıncı beyanı',
+                result.update(language=language, language_source='RSS · publisher statement',
                               language_checked_at=int(time.time()))
     except (OSError, ValueError, http.client.HTTPException, ElementTree.ParseError):
         pass
@@ -181,7 +181,7 @@ def filter_content_language(items, kind, language, cache_dir):
     if language == 'any':
         return items[:4], {'requested': 'any', 'checked': 0, 'unknown': 0, 'matched': len(items[:4])}
     if language not in LANGUAGES:
-        raise ValueError('Geçerli bir içerik dili seç.')
+        raise ValueError('Select a valid content language.')
     if kind == 'podcast':
         with ThreadPoolExecutor(max_workers=4) as executor:
             metadata = list(executor.map(lambda item: lookup_podcast_language(item.get('itunes_id'), cache_dir), items))

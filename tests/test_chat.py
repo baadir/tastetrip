@@ -50,7 +50,7 @@ class ChatTests(unittest.TestCase):
         self.assertEqual(self.client.get('/api/chat').json['thread']['revision'],0)
         invalid=self.turn({'reply':'a','preferences':[{'scope':'profile','evidence':'Kahve','changes':{'themes':['invented']}}]})
         self.assertEqual(invalid.status_code,200)
-        self.assertIn('genel profilini değiştirmedim',invalid.json['thread']['messages'][-1]['text'])
+        self.assertIn('I did not change your general profile',invalid.json['thread']['messages'][-1]['text'])
         self.assertEqual(self.client.get('/api/chat').json['profile']['profile_version'],0)
 
     def test_relaxed_pace_alias_is_saved_and_message_is_not_rejected(self):
@@ -87,6 +87,8 @@ class ChatTests(unittest.TestCase):
 
     def test_concurrent_profile_change_rejects_entire_turn(self):
         def model(*args,**kwargs):
+            if args[0].startswith('Identify only the language'):
+                return {'language': 'English'}
             from flask import g
             import json
             import sqlite3

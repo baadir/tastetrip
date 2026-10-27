@@ -86,11 +86,11 @@ def create_app(test_config=None):
             allowed = os.getenv('APP_ORIGIN', 'http://localhost:8080').rstrip('/')
             origin = request.headers.get('Origin')
             if origin and origin != allowed:
-                return jsonify(error='İstek kaynağı kabul edilmedi.'), 403
+                return jsonify(error='Request source not accepted.'), 403
             if request.headers.get('X-TasteTrip') != '1' or not request.is_json:
-                return jsonify(error='Geçersiz uygulama isteği.'), 403
+                return jsonify(error='Invalid application request.'), 403
             if not limit(('request', request.remote_addr), 80):
-                return jsonify(error='Çok fazla istek. Bir dakika sonra tekrar dene.'), 429
+                return jsonify(error='Too many requests. Try again in a minute.'), 429
         token = request.cookies.get('tt_visitor', '')
         if not re.fullmatch(r'[A-Za-z0-9_-]{43}', token):
             token = secrets.token_urlsafe(32)
@@ -121,7 +121,7 @@ def create_app(test_config=None):
 
     @app.errorhandler(ValueError)
     def bad_input(error):
-        return jsonify(error=str(error)[:600] or 'Girilen bilgileri kontrol et.'), 400
+        return jsonify(error=str(error)[:600] or 'Check the information entered.'), 400
 
     @app.errorhandler(providers.ProviderError)
     def upstream_error(error):
@@ -129,16 +129,16 @@ def create_app(test_config=None):
 
     @app.errorhandler(413)
     def too_large(_error):
-        return jsonify(error='İstek çok büyük.'), 413
+        return jsonify(error='Request too large.'), 413
 
     @app.errorhandler(500)
     def failure(_error):
-        return jsonify(error='İşlem tamamlanamadı. Mevcut rotan korundu.'), 500
+        return jsonify(error='Operation could not be completed. Your current route was preserved.'), 500
 
     def body():
         value = request.get_json()
         if not isinstance(value, dict):
-            raise ValueError('JSON nesnesi bekleniyor.')
+            raise ValueError('JSON object expected.')
         return value
 
     profiles.register(app, db, body)
@@ -147,7 +147,7 @@ def create_app(test_config=None):
     def draft():
         row = db().execute('SELECT body FROM drafts WHERE visitor_id=?', (g.visitor,)).fetchone()
         if not row:
-            raise ValueError('Önce bir rota oluştur veya kaydedilmiş rotanı aç.')
+            raise ValueError('First create a route or open your saved route.')
         return decorate_reservations(json.loads(row['body']))
 
     def decorate_reservations(plan):
@@ -170,7 +170,7 @@ def create_app(test_config=None):
     reservations.register(app, db, body, draft, profiles)
 
     def auth_needed():
-        return jsonify(error='Bu işlem için giriş yapmalısın.', code='login_required'), 401
+        return jsonify(error='You must log in for this action.', code='login_required'), 401
 
     @app.get('/health')
     def health():
@@ -205,24 +205,24 @@ def create_app(test_config=None):
     @app.post('/api/auth')
     def auth():
         if not limit(('auth', request.remote_addr), 12, 900):
-            return jsonify(error='Çok fazla giriş denemesi. Daha sonra tekrar dene.'), 429
+            return jsonify(error='Too many login attempts. Try again later.'), 429
         data = body()
         username, password = str(data.get('username', '')).strip().lower(), data.get('password', '')
         if not re.fullmatch(r'[a-z0-9_.-]{3,50}', username) or not isinstance(password, str) or not 12 <= len(password) <= 200:
-            raise ValueError('Kullanıcı adı 3–50 küçük harf/rakam; parola en az 12 karakter olmalı.')
+            raise ValueError('Username must be 3–50 lowercase letters/numbers; password must be at least 12 characters.')
         row = db().execute('SELECT * FROM users WHERE username=?', (username,)).fetchone()
         if data.get('register'):
             if row:
-                raise ValueError('Bu kullanıcı adı kullanılamıyor.')
+                raise ValueError('This username is not available.')
             user = {'id': secrets.token_urlsafe(16), 'username': username}
             try:
                 db().execute('INSERT INTO users VALUES (?,?,?)',
                              (user['id'], username, generate_password_hash(password, method='scrypt')))
             except sqlite3.IntegrityError:
-                raise ValueError('Bu kullanıcı adı kullanılamıyor.') from None
+                raise ValueError('This username is not available.') from None
         else:
             if not row or not check_password_hash(row['password'], password):
-                return jsonify(error='Kullanıcı adı veya parola hatalı.'), 401
+                return jsonify(error='Username or password incorrect.'), 401
             user = {'id': row['id'], 'username': username}
         if g.user and g.user['id'] != user['id']:
             db().execute('DELETE FROM drafts WHERE visitor_id=?', (g.visitor,))
@@ -285,10 +285,10 @@ def create_app(test_config=None):
         data = body()
         query = str(data.get('query', '')).strip()
         if not 2 <= len(query) <= 100:
-            raise ValueError('En az iki karakterle bir sanatçı, kitap, film veya mekân ara.')
+            raise ValueError('Search for an artist, book, film, or place with at least two characters.')
         kind = data.get('kind')
         if kind and kind not in ('book', 'movie', 'podcast', 'artist', 'tv_show', 'videogame', 'brand', 'destination', 'place'):
-            raise ValueError('Geçersiz içerik türü.')
+            raise ValueError('Invalid content type.')
         results = providers.resolve_interests(query, kind)
         profiles.catalog(db, results, kind)
         return jsonify(results=results)
@@ -296,7 +296,7 @@ def create_app(test_config=None):
     @app.post('/api/plan')
     def plan():
         if not limit(('plan', g.visitor), 5, 300):
-            return jsonify(error='Rota oluşturma sınırına ulaştın. Birkaç dakika sonra tekrar dene.'), 429
+            return jsonify(error='You have reached the route creation limit. Try again in a few minutes.'), 429
         data = body()
         profile = profiles.load(db)
         resolved = {**{'budget': profile['budget'], 'pace': profile['pace'], 'transport': profile['transport']}, **data}
@@ -315,7 +315,7 @@ def create_app(test_config=None):
     def revise():
         data, old = body(), draft()
         if data.get('revision') != old['revision']:
-            return jsonify(error='Taslak başka bir işlemde değişti. Sayfayı yenile.'), 409
+            return jsonify(error='The draft was changed in another operation. Refresh the page.'), 409
         old = json.loads(json.dumps(old))
         profile = profiles.load(db)
         old['trip']['taste_context'] = profiles.context(profile, 'place')
@@ -330,7 +330,7 @@ def create_app(test_config=None):
         current = json.loads(connection.execute('SELECT body FROM drafts WHERE visitor_id=?', (g.visitor,)).fetchone()['body'])
         if current['id'] != old['id'] or current['revision'] != old['revision']:
             connection.rollback()
-            return jsonify(error='Taslak değişti; yeni sürümü yükleyip tekrar dene.'), 409
+            return jsonify(error='The draft changed; load the new version and try again.'), 409
         return jsonify(plan=store_draft(updated))
 
     @app.post('/api/recommend')
@@ -339,16 +339,16 @@ def create_app(test_config=None):
         valid = {s['id'] for d in current['days'] for s in d['stops']}
         stop_id = data.get('stop_id')
         if stop_id not in valid:
-            raise ValueError('Geçerli bir durak seç.')
+            raise ValueError('Select a valid stop.')
         kind = data.get('kind')
         if kind not in ('book', 'movie', 'podcast', 'artist', 'tv_show', 'videogame', 'brand', 'destination'):
-            raise ValueError('Geçersiz içerik türü.')
+            raise ValueError('Invalid content type.')
         profile = profiles.load(db)
         saved_content = profile['content'].get(kind, {})
         language = data.get('language', saved_content.get('language', 'any'))
         from .content_languages import LANGUAGES, filter_content_language
         if language != 'any' and (kind not in ('book', 'podcast') or language not in LANGUAGES):
-            raise ValueError('Bu içerik için geçerli bir dil seç.')
+            raise ValueError('Select a valid language for this content.')
         tastes = data.get('tastes', saved_content.get('tastes', []))
         if not isinstance(tastes, list) or len(tastes) > 5 or any(
                 not isinstance(t, dict) or not re.fullmatch(
@@ -356,15 +356,15 @@ def create_app(test_config=None):
                      r'(?:urn:tag:[A-Za-z0-9_:-]{1,180}|[A-Fa-f0-9-]{36})' if kind == 'book' else
                      r'[A-Fa-f0-9-]{36}'), str(t.get('id', '')))
                 or not isinstance(t.get('name'), str) or not 1 <= len(t['name']) <= 250 for t in tastes):
-            raise ValueError('En fazla 5 geçerli eser seçebilirsin.')
+            raise ValueError('You can select at most 5 valid works.')
         if not tastes and data.get('skip_taste') is not True:
-            raise ValueError('Önce sevdiğin bir eser seç veya “Şimdilik atla” ile devam et.')
+            raise ValueError('First select a work you like or continue with “Skip for now”.')
         tastes = list({t['id']: {'id': t['id'], 'name': t['name']} for t in tastes}.values())
         # Persistent preferences change only on explicit opt-in; recommendations otherwise read the master.
         if tastes:
             profiles.checked_items(db, tastes, kind)
         if data.get('remember_profile') is True and data.get('profile_version') != profile['profile_version']:
-            return jsonify(error='Profil değişti. Seçimlerini koruyup yeniden yükle.', code='profile_conflict'), 409
+            return jsonify(error='The profile changed. Keep your selections and reload.', code='profile_conflict'), 409
         context = profiles.context(profile, kind)
         effective = tastes if 'tastes' in data or data.get('skip_taste') is True else saved_content.get('tastes', [])
         topics = [t['id'] for t in effective if t['id'].startswith('urn:tag:')]
@@ -384,15 +384,15 @@ def create_app(test_config=None):
                 results = enrich_podcast_links(results, app.config['DATA_DIR'])
         if data.get('remember_profile') is True:
             if data.get('profile_version') != profile['profile_version']:
-                return jsonify(error='Profil değişti. Seçimlerini koruyup yeniden yükle.', code='profile_conflict'), 409
+                return jsonify(error='The profile changed. Keep your selections and reload.', code='profile_conflict'), 409
             entry = {'tastes': tastes, 'language': language, 'query': data.get('query', '')}
             value = profiles.validate(db, {'content': {kind: entry}}, profile)
             saved = profiles.save(db, value, profile['profile_version'])
             if saved is None:
-                return jsonify(error='Profil değişti. Yeniden yükle.', code='profile_conflict'), 409
+                return jsonify(error='The profile changed. Reload.', code='profile_conflict'), 409
             profile = saved
         return jsonify(results=results, tastes=tastes, profile=profile, language_status=language_status,
-                       basis=('Seçtiğin konular ve seyahat bağlamı' if topics else 'Seçtiğin eserler ve seyahat bağlamı') if tastes else 'Seyahat bağlamı ve varsa genel tercihlerin')
+                       basis=('Your selected topics and travel context' if topics else 'Your selected works and travel context') if tastes else 'Travel context and your general preferences, if any')
 
     @app.post('/api/podcast/topics')
     @app.post('/api/content/topics')
@@ -400,9 +400,9 @@ def create_app(test_config=None):
         data = body()
         text = str(data.get('query', '')).strip()
         if not 2 <= len(text) <= 300:
-            raise ValueError('2–300 karakterle dinlemek istediğin konuyu yaz.')
+            raise ValueError('Write the topic you want to listen to with 2–300 characters.')
         if not limit(('topics', g.visitor), 12, 300):
-            return jsonify(error='Çok fazla konu araması. Biraz sonra yeniden dene.'), 429
+            return jsonify(error='Too many topic searches. Try again a little later.'), 429
         kind = data.get('kind', 'podcast')
         result = providers.content_topics(text, kind)
         profiles.catalog(db, result['topics'], kind)
@@ -432,14 +432,14 @@ def create_app(test_config=None):
         row = db().execute('SELECT body FROM plans WHERE id=? AND user_id=?',
                            (body().get('id'), g.user['id'])).fetchone()
         if not row:
-            return jsonify(error='Rota bulunamadı.'), 404
+            return jsonify(error='Route not found.'), 404
         return jsonify(plan=store_draft(decorate_reservations(json.loads(row['body']))))
 
     @app.post('/api/airports')
     def airports():
         term = str(body().get('query', '')).strip()
         if not 2 <= len(term) <= 100:
-            raise ValueError('Şehir veya havalimanı ara.')
+            raise ValueError('Search city or airport.')
         return jsonify(results=providers.airport_search(term))
 
     @app.post('/api/flights')
@@ -447,18 +447,18 @@ def create_app(test_config=None):
         data = body()
         origin, destination = str(data.get('origin', '')).upper(), str(data.get('destination', '')).upper()
         if not re.fullmatch('[A-Z]{3}', origin) or not re.fullmatch('[A-Z]{3}', destination) or origin == destination:
-            raise ValueError('Farklı kalkış ve varış havalimanlarını seç.')
+            raise ValueError('Select different departure and arrival airports.')
         departure = date.fromisoformat(data.get('departure', '')).isoformat()
         returning = data.get('return')
         if departure < date.today().isoformat():
-            raise ValueError('Geçmiş tarih için uçuş aranamaz.')
+            raise ValueError('Flights cannot be searched for a past date.')
         if returning:
             returning = date.fromisoformat(returning).isoformat()
             if returning < departure:
-                raise ValueError('Dönüş tarihi gidişten önce olamaz.')
+                raise ValueError('Return date cannot be before departure.')
         return jsonify(results=providers.flights(origin, destination, departure, returning),
                        search_url=providers.flight_search_url(origin, destination, departure, returning),
-                       notice='Travelpayouts önbellek fiyatlarıdır; kesin fiyat veya müsaitlik değildir. Satın alma yapılmaz.')
+                       notice='These are Travelpayouts cached prices; not a final price or availability. No purchase is made.')
 
     return app
 

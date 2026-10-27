@@ -71,7 +71,7 @@ class VoiceMonitor:
             if not isinstance(data, dict) or set(data) not in ({"attempt_id"}, {"attempt_id", "scenario"}) or not isinstance(data["attempt_id"], str):
                 raise web.HTTPBadRequest()
             if self.state["active"] or self.state.get('dial_lease',0)>time.monotonic():
-                return web.json_response({"error": "Bir görüşme zaten sürüyor."}, status=409)
+                return web.json_response({"error": 'A call is already in progress.'}, status=409)
             self.state['dial_lease']=time.monotonic()+240
             self.state['dial_owner']='demo'
             async def work():
