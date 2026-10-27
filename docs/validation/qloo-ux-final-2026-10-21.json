@@ -1,0 +1,340 @@
+{
+  "phase": "final",
+  "calls": 9,
+  "results": [
+    {
+      "case": "Istanbul/category",
+      "params": {
+        "filter.type": "urn:entity:place",
+        "filter.location.query": "Istanbul",
+        "filter.tags": "urn:tag:category:place:restaurant",
+        "take": 10
+      },
+      "http": 200,
+      "seconds": 1.7,
+      "count": 10,
+      "metadata_nonempty": {
+        "phone": 8,
+        "address": 10,
+        "website": 6,
+        "image": 10,
+        "hours": 10,
+        "price_level": 7,
+        "menu_url": 0,
+        "google_place_id": 10
+      },
+      "primary_genres": {
+        "Shopping mall": 1,
+        "Steak house": 1,
+        "Hotel": 1,
+        "Restaurant": 6,
+        "Community center": 1
+      },
+      "with_restaurant_tag": 10,
+      "with_hotel_tag": 1,
+      "primary_restaurant_count": 7,
+      "primary_restaurant_metadata": {
+        "phone": 6,
+        "address": 7,
+        "website": 4,
+        "image": 7,
+        "hours": 7,
+        "price_level": 7,
+        "menu_url": 0,
+        "google_place_id": 7
+      },
+      "requested_tag_membership": {
+        "urn:tag:category:place:restaurant": 10
+      }
+    },
+    {
+      "case": "Rome/category",
+      "params": {
+        "filter.type": "urn:entity:place",
+        "filter.location.query": "Rome",
+        "filter.tags": "urn:tag:category:place:restaurant",
+        "take": 10
+      },
+      "http": 200,
+      "seconds": 1.66,
+      "count": 10,
+      "metadata_nonempty": {
+        "phone": 9,
+        "address": 10,
+        "website": 9,
+        "image": 10,
+        "hours": 9,
+        "price_level": 8,
+        "menu_url": 0,
+        "google_place_id": 10
+      },
+      "primary_genres": {
+        "Roman restaurant": 1,
+        "Outlet mall": 1,
+        "Restaurant": 7,
+        "Hotel": 1
+      },
+      "with_restaurant_tag": 10,
+      "with_hotel_tag": 1,
+      "primary_restaurant_count": 8,
+      "primary_restaurant_metadata": {
+        "phone": 7,
+        "address": 8,
+        "website": 7,
+        "image": 8,
+        "hours": 7,
+        "price_level": 8,
+        "menu_url": 0,
+        "google_place_id": 8
+      },
+      "requested_tag_membership": {
+        "urn:tag:category:place:restaurant": 10
+      }
+    },
+    {
+      "case": "Mumbai/category",
+      "params": {
+        "filter.type": "urn:entity:place",
+        "filter.location.query": "Mumbai",
+        "filter.tags": "urn:tag:category:place:restaurant",
+        "take": 10
+      },
+      "http": 200,
+      "seconds": 1.5,
+      "count": 10,
+      "metadata_nonempty": {
+        "phone": 9,
+        "address": 10,
+        "website": 10,
+        "image": 10,
+        "hours": 9,
+        "price_level": 7,
+        "menu_url": 0,
+        "google_place_id": 10
+      },
+      "primary_genres": {
+        "Vegetarian restaurant": 1,
+        "South Indian restaurant": 1,
+        "Hotel": 2,
+        "Cafe": 2,
+        "Restaurant": 1,
+        "Dessert restaurant": 1,
+        "Fast food restaurant": 1,
+        "Lounge bar": 1
+      },
+      "with_restaurant_tag": 10,
+      "with_hotel_tag": 2,
+      "primary_restaurant_count": 8,
+      "primary_restaurant_metadata": {
+        "phone": 7,
+        "address": 8,
+        "website": 8,
+        "image": 8,
+        "hours": 7,
+        "price_level": 7,
+        "menu_url": 0,
+        "google_place_id": 8
+      },
+      "requested_tag_membership": {
+        "urn:tag:category:place:restaurant": 10
+      }
+    },
+    {
+      "case": "Rome/outdoor",
+      "params": {
+        "filter.type": "urn:entity:place",
+        "filter.location.query": "Rome",
+        "filter.tags": "urn:tag:category:place:restaurant,urn:tag:service_options:place:outdoor_seating",
+        "operator.filter.tags": "intersection",
+        "take": 10
+      },
+      "http": 200,
+      "seconds": 1.64,
+      "count": 10,
+      "metadata_nonempty": {
+        "phone": 9,
+        "address": 10,
+        "website": 9,
+        "image": 10,
+        "hours": 9,
+        "price_level": 10,
+        "menu_url": 0,
+        "google_place_id": 10
+      },
+      "primary_genres": {
+        "Roman restaurant": 3,
+        "Restaurant": 6,
+        "Italian restaurant": 1
+      },
+      "with_restaurant_tag": 10,
+      "with_hotel_tag": 0,
+      "primary_restaurant_count": 10,
+      "primary_restaurant_metadata": {
+        "phone": 9,
+        "address": 10,
+        "website": 9,
+        "image": 10,
+        "hours": 9,
+        "price_level": 10,
+        "menu_url": 0,
+        "google_place_id": 10
+      },
+      "requested_tag_membership": {
+        "urn:tag:category:place:restaurant": 10,
+        "urn:tag:service_options:place:outdoor_seating": 10
+      }
+    },
+    {
+      "case": "Rome/halal",
+      "params": {
+        "filter.type": "urn:entity:place",
+        "filter.location.query": "Rome",
+        "filter.tags": "urn:tag:category:place:restaurant,urn:tag:dietary_option:qloo:halal",
+        "operator.filter.tags": "intersection",
+        "take": 10
+      },
+      "http": 200,
+      "seconds": 1.56,
+      "count": 10,
+      "metadata_nonempty": {
+        "phone": 10,
+        "address": 10,
+        "website": 10,
+        "image": 10,
+        "hours": 10,
+        "price_level": 10,
+        "menu_url": 0,
+        "google_place_id": 10
+      },
+      "primary_genres": {
+        "Restaurant": 5,
+        "Roman restaurant": 2,
+        "Italian restaurant": 2,
+        "Pizza restaurant": 1
+      },
+      "with_restaurant_tag": 10,
+      "with_hotel_tag": 0,
+      "primary_restaurant_count": 10,
+      "primary_restaurant_metadata": {
+        "phone": 10,
+        "address": 10,
+        "website": 10,
+        "image": 10,
+        "hours": 10,
+        "price_level": 10,
+        "menu_url": 0,
+        "google_place_id": 10
+      },
+      "requested_tag_membership": {
+        "urn:tag:category:place:restaurant": 10,
+        "urn:tag:dietary_option:qloo:halal": 10
+      }
+    },
+    {
+      "case": "Rome/japanese",
+      "params": {
+        "filter.type": "urn:entity:place",
+        "filter.location.query": "Rome",
+        "filter.tags": "urn:tag:category:place:restaurant,urn:tag:genre:place:restaurant:japanese",
+        "operator.filter.tags": "intersection",
+        "take": 10
+      },
+      "http": 200,
+      "seconds": 1.48,
+      "count": 10,
+      "metadata_nonempty": {
+        "phone": 10,
+        "address": 10,
+        "website": 10,
+        "image": 10,
+        "hours": 10,
+        "price_level": 10,
+        "menu_url": 0,
+        "google_place_id": 10
+      },
+      "primary_genres": {
+        "Japanese restaurant": 4,
+        "Restaurant": 4,
+        "Sushi restaurant": 1,
+        "Asian restaurant": 1
+      },
+      "with_restaurant_tag": 10,
+      "with_hotel_tag": 1,
+      "primary_restaurant_count": 10,
+      "primary_restaurant_metadata": {
+        "phone": 10,
+        "address": 10,
+        "website": 10,
+        "image": 10,
+        "hours": 10,
+        "price_level": 10,
+        "menu_url": 0,
+        "google_place_id": 10
+      },
+      "requested_tag_membership": {
+        "urn:tag:category:place:restaurant": 10,
+        "urn:tag:genre:place:restaurant:japanese": 10
+      }
+    },
+    {
+      "case": "Rome/clean_entity_1",
+      "seed_primary_category": "Vegetarian restaurant",
+      "http": 200,
+      "seconds": 1.61,
+      "count": 10,
+      "metadata_nonempty": {
+        "phone": 10,
+        "address": 10,
+        "website": 6,
+        "image": 10,
+        "hours": 9,
+        "price_level": 8,
+        "menu_url": 0,
+        "google_place_id": 10
+      },
+      "primary_genres": {
+        "Indian restaurant": 2,
+        "Hotel": 1,
+        "Restaurant": 5,
+        "Pizza restaurant": 1,
+        "Hostel": 1
+      },
+      "with_restaurant_tag": 10,
+      "with_hotel_tag": 2,
+      "primary_restaurant_count": 8
+    },
+    {
+      "case": "Rome/clean_entity_2",
+      "seed_primary_category": "Vegetarian restaurant",
+      "http": 200,
+      "seconds": 1.59,
+      "count": 10,
+      "metadata_nonempty": {
+        "phone": 10,
+        "address": 10,
+        "website": 5,
+        "image": 10,
+        "hours": 9,
+        "price_level": 8,
+        "menu_url": 0,
+        "google_place_id": 10
+      },
+      "primary_genres": {
+        "Indian restaurant": 4,
+        "Hotel": 1,
+        "Restaurant": 2,
+        "Hostel": 1,
+        "Pizza restaurant": 1,
+        "Italian restaurant": 1
+      },
+      "with_restaurant_tag": 10,
+      "with_hotel_tag": 2,
+      "primary_restaurant_count": 8
+    },
+    {
+      "case": "clean_entity_comparison",
+      "same_order": false,
+      "shared_ids": 6
+    }
+  ]
+}

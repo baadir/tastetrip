@@ -1,0 +1,1685 @@
+{
+  "success": true,
+  "results": {
+    "entities": [
+      {
+        "name": "Pizza By The Bay",
+        "entity_id": "C1EDF39B-AC56-4130-B881-AD93794D9367",
+        "type": "urn:entity",
+        "subtype": "urn:entity:place",
+        "properties": {
+          "hours": {
+            "friday": [
+              {
+                "opens": "T07:00:00",
+                "closed": false,
+                "closes": "T00:30:00"
+              }
+            ],
+            "monday": [
+              {
+                "opens": "T07:00:00",
+                "closed": false,
+                "closes": "T00:30:00"
+              }
+            ],
+            "sunday": [
+              {
+                "opens": "T07:00:00",
+                "closed": false,
+                "closes": "T00:30:00"
+              }
+            ],
+            "tuesday": [
+              {
+                "opens": "T07:00:00",
+                "closed": false,
+                "closes": "T00:30:00"
+              }
+            ],
+            "saturday": [
+              {
+                "opens": "T07:00:00",
+                "closed": false,
+                "closes": "T00:30:00"
+              }
+            ],
+            "thursday": [
+              {
+                "opens": "T07:00:00",
+                "closed": false,
+                "closes": "T00:30:00"
+              }
+            ],
+            "wednesday": [
+              {
+                "opens": "T07:00:00",
+                "closed": false,
+                "closes": "T00:30:00"
+              }
+            ]
+          },
+          "phone": "+917718838749",
+          "images": [
+            {
+              "url": "https://images.qloo.com/i/C1EDF39B-AC56-4130-B881-AD93794D9367-2QSCx8-420x-outside.jpg",
+              "type": "urn:image:place:unknown"
+            }
+          ],
+          "address": "Soona Mahal 143, Marine Dr, Churchgate Mumbai, Maharashtra 400020 India",
+          "geocode": {
+            "city": "Mumbai",
+            "name": "A Ward",
+            "metro": null,
+            "country": "India",
+            "country_code": "IN",
+            "admin1_region": "Maharashtra",
+            "admin2_region": "Mumbai"
+          },
+          "parking": true,
+          "website": "http://www.pizzabythebay.in/",
+          "good_for": [
+            {
+              "id": "urn:tag:children:place:good_kids",
+              "name": "Good for kids",
+              "type": "urn:tag:children:place",
+              "weight": 0.8333333333333333
+            },
+            {
+              "id": "urn:tag:event:place:anniversary",
+              "name": "Anniversary",
+              "type": "urn:tag:event:place",
+              "weight": 0.75
+            },
+            {
+              "id": "urn:tag:event:place:work_dinner",
+              "name": "Work Dinner",
+              "type": "urn:tag:event:place",
+              "weight": 0.75
+            },
+            {
+              "id": "urn:tag:ambience:place:large_group",
+              "name": "Large Group",
+              "type": "urn:tag:ambience:place",
+              "weight": 0.9642857142857143
+            }
+          ],
+          "keywords": null,
+          "locality": {
+            "city": {
+              "name": "Mumbai",
+              "place": "city",
+              "boundary": "administrative",
+              "entity_id": "87C77B13-1A5A-4441-AEB8-E01BF0B94556",
+              "admin_level": 5,
+              "locality_id": "r7964376",
+              "abbreviation": null,
+              "country_code": null
+            },
+            "metro": null,
+            "state": {
+              "name": "Maharashtra",
+              "place": "state",
+              "boundary": "administrative",
+              "entity_id": "C2C2331C-6BED-4C24-A3E1-93775A4E4BA8",
+              "admin_level": 4,
+              "locality_id": "r1950884",
+              "abbreviation": null,
+              "country_code": null
+            },
+            "county": {
+              "name": "Mumbai",
+              "place": "city",
+              "boundary": "administrative",
+              "entity_id": "87C77B13-1A5A-4441-AEB8-E01BF0B94556",
+              "admin_level": 5,
+              "locality_id": "r7964376",
+              "abbreviation": null,
+              "country_code": null
+            },
+            "country": {
+              "name": "India",
+              "place": "country",
+              "boundary": "administrative",
+              "entity_id": "93CBAF56-B58C-4C4E-855E-8A5ACB71FD74",
+              "admin_level": 2,
+              "locality_id": "r304716",
+              "abbreviation": null,
+              "country_code": "IN"
+            },
+            "neighborhood": {
+              "name": "A Ward",
+              "place": null,
+              "boundary": "administrative",
+              "entity_id": "744B3975-7F74-4345-A226-6C9BE7F9BC30",
+              "admin_level": 10,
+              "locality_id": "r7885399",
+              "abbreviation": null,
+              "country_code": null
+            }
+          },
+          "menu_url": null,
+          "is_closed": false,
+          "live_music": true,
+          "localities": [
+            {
+              "name": "India",
+              "place": "country",
+              "boundary": "administrative",
+              "entity_id": "93CBAF56-B58C-4C4E-855E-8A5ACB71FD74",
+              "admin_level": 2,
+              "locality_id": "r304716",
+              "abbreviation": null,
+              "country_code": "IN"
+            },
+            {
+              "name": "Mumbai",
+              "place": null,
+              "boundary": null,
+              "entity_id": "341FE4F4-6424-438B-A509-8CE5FD5CE26D",
+              "admin_level": 8,
+              "locality_id": "r7888990",
+              "abbreviation": null,
+              "country_code": null
+            },
+            {
+              "name": "Mumbai",
+              "place": "city",
+              "boundary": "administrative",
+              "entity_id": "87C77B13-1A5A-4441-AEB8-E01BF0B94556",
+              "admin_level": 5,
+              "locality_id": "r7964376",
+              "abbreviation": null,
+              "country_code": null
+            },
+            {
+              "name": "A Ward",
+              "place": null,
+              "boundary": "administrative",
+              "entity_id": "744B3975-7F74-4345-A226-6C9BE7F9BC30",
+              "admin_level": 10,
+              "locality_id": "r7885399",
+              "abbreviation": null,
+              "country_code": null
+            },
+            {
+              "name": "Zone 1",
+              "place": null,
+              "boundary": "administrative",
+              "entity_id": "28E1743E-B838-44DB-9659-030A4C44A860",
+              "admin_level": 9,
+              "locality_id": "r7888969",
+              "abbreviation": null,
+              "country_code": null
+            },
+            {
+              "name": "Maharashtra",
+              "place": "state",
+              "boundary": "administrative",
+              "entity_id": "C2C2331C-6BED-4C24-A3E1-93775A4E4BA8",
+              "admin_level": 4,
+              "locality_id": "r1950884",
+              "abbreviation": null,
+              "country_code": null
+            }
+          ],
+          "description": "Art-deco, monochrome beachfront restaurant offering elevated pizzas, sandwiches, and al fresco breakfast with sea views.",
+          "hotel_class": null,
+          "price_level": 3,
+          "price_range": {
+            "to": null,
+            "from": null,
+            "currency": "usd"
+          },
+          "star_rating": null,
+          "event_spaces": true,
+          "neighborhood": "A Ward",
+          "pet_friendly": null,
+          "check_in_time": null,
+          "primary_genre": {
+            "id": "urn:tag:genre:place:restaurant:italian",
+            "akas": [
+              {
+                "value": "\"Talijanski\"",
+                "languages": [
+                  "hr"
+                ]
+              },
+              {
+                "value": "\"이탈리아\"",
+                "languages": [
+                  "ko"
+                ]
+              },
+              {
+                "value": "\"Italia\"",
+                "languages": [
+                  "id"
+                ]
+              },
+              {
+                "value": "\"Italienisch\"",
+                "languages": [
+                  "de"
+                ]
+              },
+              {
+                "value": "\"Taliansky\"",
+                "languages": [
+                  "sk"
+                ]
+              },
+              {
+                "value": "\"Itāļu\"",
+                "languages": [
+                  "lv"
+                ]
+              },
+              {
+                "value": "\"Италијански\"",
+                "languages": [
+                  "sr",
+                  "mk"
+                ]
+              },
+              {
+                "value": "\"အီတလီ\"",
+                "languages": [
+                  "my"
+                ]
+              },
+              {
+                "value": "\"Італійський\"",
+                "languages": [
+                  "uk"
+                ]
+              },
+              {
+                "value": "\"Italià\"",
+                "languages": [
+                  "ca"
+                ]
+              },
+              {
+                "value": "\"Itali\"",
+                "languages": [
+                  "ms"
+                ]
+              },
+              {
+                "value": "\"Italialainen\"",
+                "languages": [
+                  "fi"
+                ]
+              },
+              {
+                "value": "\"იტალიური\"",
+                "languages": [
+                  "ka"
+                ]
+              },
+              {
+                "value": "\"義大利\"",
+                "languages": [
+                  "zh_tw"
+                ]
+              },
+              {
+                "value": "\"Kiitaliano\"",
+                "languages": [
+                  "sw"
+                ]
+              },
+              {
+                "value": "\"ఇటాలియన్\"",
+                "languages": [
+                  "te"
+                ]
+              },
+              {
+                "value": "\"Italiarra\"",
+                "languages": [
+                  "eu"
+                ]
+              },
+              {
+                "value": "\"Italian\"",
+                "languages": [
+                  "sq",
+                  "ro",
+                  "en_gb"
+                ]
+              },
+              {
+                "value": "\"Итальянский\"",
+                "languages": [
+                  "ru"
+                ]
+              },
+              {
+                "value": "\"Itaalia\"",
+                "languages": [
+                  "et"
+                ]
+              },
+              {
+                "value": "\"إيطالي\"",
+                "languages": [
+                  "ar"
+                ]
+              },
+              {
+                "value": "\"Itališkas\"",
+                "languages": [
+                  "lt"
+                ]
+              },
+              {
+                "value": "\"Италиански\"",
+                "languages": [
+                  "bg"
+                ]
+              },
+              {
+                "value": "\"Ý\"",
+                "languages": [
+                  "vi"
+                ]
+              },
+              {
+                "value": "\"Italijanski\"",
+                "languages": [
+                  "bs",
+                  "sl"
+                ]
+              },
+              {
+                "value": "\"Italien\"",
+                "languages": [
+                  "fr_ca",
+                  "fr"
+                ]
+              },
+              {
+                "value": "\"Italské\"",
+                "languages": [
+                  "cs"
+                ]
+              },
+              {
+                "value": "\"איטלקי\"",
+                "languages": [
+                  "he"
+                ]
+              },
+              {
+                "value": "\"Olasz\"",
+                "languages": [
+                  "hu"
+                ]
+              },
+              {
+                "value": "\"ইতালীয়\"",
+                "languages": [
+                  "bn"
+                ]
+              },
+              {
+                "value": "\"इतालवी\"",
+                "languages": [
+                  "hi"
+                ]
+              },
+              {
+                "value": "\"イタリア料理\"",
+                "languages": [
+                  "ja"
+                ]
+              },
+              {
+                "value": "\"Italiano\"",
+                "languages": [
+                  "pt_pt",
+                  "it",
+                  "es_ar",
+                  "es_la",
+                  "pt",
+                  "es",
+                  "gl"
+                ]
+              },
+              {
+                "value": "\"Ιταλικό\"",
+                "languages": [
+                  "el"
+                ]
+              },
+              {
+                "value": "\"Итальян\"",
+                "languages": [
+                  "kk"
+                ]
+              },
+              {
+                "value": "\"İtalyan\"",
+                "languages": [
+                  "tr",
+                  "az"
+                ]
+              },
+              {
+                "value": "\"இத்தாலிய\"",
+                "languages": [
+                  "ta"
+                ]
+              },
+              {
+                "value": "\"Italyano\"",
+                "languages": [
+                  "tl"
+                ]
+              },
+              {
+                "value": "\"Italiensk\"",
+                "languages": [
+                  "da",
+                  "sv",
+                  "nb"
+                ]
+              },
+              {
+                "value": "\"អ៊ីតាលី\"",
+                "languages": [
+                  "km"
+                ]
+              },
+              {
+                "value": "\"ອິຕາລີ\"",
+                "languages": [
+                  "lo"
+                ]
+              },
+              {
+                "value": "\"อิตาลี\"",
+                "languages": [
+                  "th"
+                ]
+              },
+              {
+                "value": "\"Włoski\"",
+                "languages": [
+                  "pl"
+                ]
+              },
+              {
+                "value": "\"意大利菜\"",
+                "languages": [
+                  "zh"
+                ]
+              },
+              {
+                "value": "\"Italiaans\"",
+                "languages": [
+                  "nl",
+                  "af"
+                ]
+              }
+            ],
+            "name": "Italian restaurant",
+            "type": "urn:tag:genre:place",
+            "weight": null
+          },
+          "check_out_time": null,
+          "business_rating": 4.199999809265137,
+          "loyalty_program": null,
+          "number_of_rooms": null,
+          "cost_description": null,
+          "specialty_dishes": [
+            {
+              "id": "urn:tag:specialty_dish:place:pizza_bay",
+              "name": "Pizza By The Bay",
+              "type": "urn:tag:specialty_dish:place",
+              "weight": 1
+            },
+            {
+              "id": "urn:tag:specialty_dish:place:deep_dish_pizza",
+              "name": "Deep Dish Pizza",
+              "type": "urn:tag:specialty_dish:place",
+              "weight": 0.8571428571428571
+            },
+            {
+              "id": "urn:tag:specialty_dish:place:bombay_masala_pizza",
+              "name": "Bombay Masala Pizza",
+              "type": "urn:tag:specialty_dish:place",
+              "weight": 0.7142857142857143
+            }
+          ],
+          "short_description": "Art-deco, monochrome beachfront restaurant offering elevated pizzas, sandwiches, and al fresco breakfast with sea views.",
+          "number_of_stations": null,
+          "cuisine_description": "Pizza By The Bay offers a blend of Italian and international cuisine, renowned for its freshly rolled dough pizzas with signature cheese and homemade tomato sauce, authentic pasta dishes, and a popular lunch buffet featuring soups, salads, and sandwiches. The restaurant also serves an extensive breakfast menu and offers a variety of cocktails, mocktails, and alcoholic beverages, with options catering to vegetarian, vegan, and Jain dietary preferences.",
+          "overall_description": "A celebrated and iconic Mumbai landmark located along the scenic Marine Drive, this restaurant offers a sophisticated yet relaxed dining experience. Known for its extensive selection of thin-crust pizzas, Italian classics, and diverse breakfast menu, it seamlessly blends Art Deco aesthetics with stunning Arabian Sea views. Whether visited for a morning meal by the water or an evening out with cocktails, it remains a favorite destination for both locals and tourists seeking a quintessential seaside atmosphere.",
+          "service_description": "The restaurant provides dine-in service with both indoor air-conditioned and outdoor al fresco seating overlooking Marine Drive, as well as takeout and delivery options. It operates on a first-come, first-served basis without formal reservations, making it a bustling destination suitable for romantic dinners, family meals, and casual gatherings with friends.",
+          "ambience_description": "The space exudes a classic, stylish atmosphere with Art Deco-inspired interiors and a relaxed, breezy seaside vibe that feels both sophisticated and welcoming.",
+          "amenities_description": "The restaurant provides both indoor and outdoor seating options with valet parking and wheelchair access to ensure comfort and convenience.",
+          "unique_selling_points": "Famous for its stunning location directly facing the Arabian Sea and its history as a long-standing culinary institution, the restaurant is defined by its signature thin-crust pizzas and breezy al fresco dining.",
+          "neighborhood_description": "Located in the heart of Churchgate, the area is a vibrant, historic neighborhood known for its bustling urban energy and proximity to one of the city's most famous seaside walkways.",
+          "physical_setting_description": "Situated directly across from the iconic Marine Drive promenade, this restaurant offers panoramic views of the Arabian Sea. It features a blend of indoor, air-conditioned seating and open-air tables that capture the coastal breeze.",
+          "customer_demographics_description": "The restaurant attracts a diverse clientele ranging from local Mumbai residents to tourists visiting the iconic Marine Drive area, including couples seeking romantic dining, families, and groups of friends drawn to the scenic seaside atmosphere.",
+          "image": {
+            "url": "https://images.qloo.com/i/C1EDF39B-AC56-4130-B881-AD93794D9367-420x-auto.jpg"
+          }
+        },
+        "popularity": 0.9977413551720385,
+        "location": {
+          "lat": 18.9333915,
+          "lon": 72.82388209999999,
+          "geohash": "te7g9nsxp2nb"
+        },
+        "tags": [
+          {
+            "id": "urn:tag:dining_options:place:catering",
+            "name": "Catering",
+            "type": "urn:tag:dining_options:place",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:setting:qloo:marine_drive",
+            "name": "Marine drive",
+            "type": "urn:tag:setting:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:service_options:place:no_contact_delivery",
+            "name": "No contact delivery",
+            "type": "urn:tag:service_options:place",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:payments:place:google_pay",
+            "name": "Google pay",
+            "type": "urn:tag:payments:place",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:menu_highlight:qloo:bruschetta",
+            "name": "Bruschetta",
+            "type": "urn:tag:menu_highlight:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:service_type:qloo:pickup",
+            "name": "Pickup",
+            "type": "urn:tag:service_type:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:dining_options:place:lunch",
+            "name": "Lunch",
+            "type": "urn:tag:dining_options:place",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:view:qloo:ocean_view",
+            "name": "Ocean view",
+            "type": "urn:tag:view:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:menu_highlight:qloo:watermelon_feta_salad",
+            "name": "Watermelon feta salad",
+            "type": "urn:tag:menu_highlight:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:nearby_attraction:qloo:marine_drive",
+            "name": "Marine drive",
+            "type": "urn:tag:nearby_attraction:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:amenities:place:bar_onsite",
+            "name": "Bar onsite",
+            "type": "urn:tag:amenities:place",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:customer_identity:qloo:locals",
+            "name": "Locals",
+            "type": "urn:tag:customer_identity:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:beverage_offering:qloo:full_bar",
+            "name": "Full bar",
+            "type": "urn:tag:beverage_offering:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:amenity:qloo:valet_parking",
+            "name": "Valet parking",
+            "type": "urn:tag:amenity:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:offerings:place:healthy_options",
+            "name": "Healthy options",
+            "type": "urn:tag:offerings:place",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:specialty_dish:place:cheese_garlic_bread",
+            "name": "Cheese garlic bread",
+            "type": "urn:tag:specialty_dish:place",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:interests:qloo:live_jazz",
+            "name": "Live jazz",
+            "type": "urn:tag:interests:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:accessibility:place:wheelchair_accessible_entrance",
+            "name": "Wheelchair accessible entrance",
+            "type": "urn:tag:accessibility:place",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:ambience:qloo:classic",
+            "name": "Classic",
+            "type": "urn:tag:ambience:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:decor:qloo:monochrome",
+            "name": "Monochrome",
+            "type": "urn:tag:decor:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:menu_highlight:qloo:bombay_masala_pizza",
+            "name": "Bombay masala pizza",
+            "type": "urn:tag:menu_highlight:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:dining_options:place:table_service",
+            "name": "Table service",
+            "type": "urn:tag:dining_options:place",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:service_type:qloo:dine_in",
+            "name": "Dine in",
+            "type": "urn:tag:service_type:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:ambience:qloo:casual",
+            "name": "Casual",
+            "type": "urn:tag:ambience:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:beverage_offering:qloo:cocktails",
+            "name": "Cocktails",
+            "type": "urn:tag:beverage_offering:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:customer_identity:qloo:couples",
+            "name": "Couples",
+            "type": "urn:tag:customer_identity:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:offerings:place:late_night_food",
+            "name": "Late night food",
+            "type": "urn:tag:offerings:place",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:customer_identity:qloo:foodies",
+            "name": "Foodies",
+            "type": "urn:tag:customer_identity:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:planning:place:usually_a_wait",
+            "name": "Usually a wait",
+            "type": "urn:tag:planning:place",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:offerings:place:cuisine",
+            "name": "Cuisine",
+            "type": "urn:tag:offerings:place",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:beverage_offering:qloo:beer",
+            "name": "Beer",
+            "type": "urn:tag:beverage_offering:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:children:place:good_for_kids_birthday",
+            "name": "Good for kids birthday",
+            "type": "urn:tag:children:place",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:setting:qloo:city_center",
+            "name": "City center",
+            "type": "urn:tag:setting:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:not_for_display:place:temperature_check_required",
+            "name": "Temperature check required",
+            "type": "urn:tag:not_for_display:place",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:activity_type:qloo:breakfast",
+            "name": "Breakfast",
+            "type": "urn:tag:activity_type:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:ambience:qloo:art_deco",
+            "name": "Art deco",
+            "type": "urn:tag:ambience:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:activity_type:qloo:sightseeing",
+            "name": "Sightseeing",
+            "type": "urn:tag:activity_type:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:dietary_option:qloo:vegan",
+            "name": "Vegan",
+            "type": "urn:tag:dietary_option:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:specialty_dish:place:deep_dish_pizza",
+            "name": "Deep dish pizza",
+            "type": "urn:tag:specialty_dish:place",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:not_for_display:place:staff_get_temperature_checks",
+            "name": "Staff get temperature checks",
+            "type": "urn:tag:not_for_display:place",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:ambience:qloo:seaside_vibe",
+            "name": "Seaside vibe",
+            "type": "urn:tag:ambience:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:dietary_option:qloo:gluten_free",
+            "name": "Gluten free",
+            "type": "urn:tag:dietary_option:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:offerings:place:organic_dishes",
+            "name": "Organic dishes",
+            "type": "urn:tag:offerings:place",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:nearby_attraction:qloo:churchgate",
+            "name": "Churchgate",
+            "type": "urn:tag:nearby_attraction:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:genre:place:restaurant:pizza",
+            "name": "Pizza",
+            "type": "urn:tag:genre:place",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:ambience:qloo:comfortable",
+            "name": "Comfortable",
+            "type": "urn:tag:ambience:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:view:qloo:marine_drive_promenade",
+            "name": "Marine drive promenade",
+            "type": "urn:tag:view:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:getting_here:place:not_for_display",
+            "name": "Not for display",
+            "type": "urn:tag:getting_here:place",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:setting:qloo:historic",
+            "name": "Historic",
+            "type": "urn:tag:setting:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:interests:qloo:urban_sightseeing",
+            "name": "Urban sightseeing",
+            "type": "urn:tag:interests:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:parking:place:paid_street_parking",
+            "name": "Paid street parking",
+            "type": "urn:tag:parking:place",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:menu_highlight:qloo:tres_leche",
+            "name": "Tres leche",
+            "type": "urn:tag:menu_highlight:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:decor:qloo:modern",
+            "name": "Modern",
+            "type": "urn:tag:decor:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:payments:place:nfc_mobile_payments",
+            "name": "Nfc mobile payments",
+            "type": "urn:tag:payments:place",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:offerings:place:jain_vegetarian_food",
+            "name": "Jain vegetarian food",
+            "type": "urn:tag:offerings:place",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:neighborhood_characteristic:qloo:bustling",
+            "name": "Bustling",
+            "type": "urn:tag:neighborhood_characteristic:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:category:place:breakfast_restaurant",
+            "name": "Breakfast restaurant",
+            "type": "urn:tag:category:place",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:ambience:qloo:elegant",
+            "name": "Elegant",
+            "type": "urn:tag:ambience:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:dining_options:place:breakfast",
+            "name": "Breakfast",
+            "type": "urn:tag:dining_options:place",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:offerings:place:hot_tea",
+            "name": "Hot tea",
+            "type": "urn:tag:offerings:place",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:service_options:place:onsite_services",
+            "name": "Onsite services",
+            "type": "urn:tag:service_options:place",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:menu_highlight:qloo:garlic_burnt_pizza",
+            "name": "Garlic burnt pizza",
+            "type": "urn:tag:menu_highlight:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:neighborhood_characteristic:qloo:central",
+            "name": "Central",
+            "type": "urn:tag:neighborhood_characteristic:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:service_type:qloo:buffet",
+            "name": "Buffet",
+            "type": "urn:tag:service_type:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:offerings:place:wine",
+            "name": "Wine",
+            "type": "urn:tag:offerings:place",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:neighborhood_characteristic:qloo:walkable",
+            "name": "Walkable",
+            "type": "urn:tag:neighborhood_characteristic:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:culinary_style:qloo:traditional",
+            "name": "Traditional",
+            "type": "urn:tag:culinary_style:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:interests:qloo:coastal_dining",
+            "name": "Coastal dining",
+            "type": "urn:tag:interests:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:amenity:qloo:outdoor_seating",
+            "name": "Outdoor seating",
+            "type": "urn:tag:amenity:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:age_range:qloo:25_29",
+            "name": "25 29",
+            "type": "urn:tag:age_range:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:specialty_dish:place:bombay_masala_pizza",
+            "name": "Bombay masala pizza",
+            "type": "urn:tag:specialty_dish:place",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:age_range:qloo:18_24",
+            "name": "18 24",
+            "type": "urn:tag:age_range:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:customer_identity:qloo:groups_of_friends",
+            "name": "Groups of friends",
+            "type": "urn:tag:customer_identity:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:offerings:place:cocktails",
+            "name": "Cocktails",
+            "type": "urn:tag:offerings:place",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:offerings:place:happy_hour",
+            "name": "Happy hour",
+            "type": "urn:tag:offerings:place",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:dining_options:place:seating",
+            "name": "Seating",
+            "type": "urn:tag:dining_options:place",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:offerings:place:hard_liquor",
+            "name": "Hard liquor",
+            "type": "urn:tag:offerings:place",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:ambience:qloo:lively",
+            "name": "Lively",
+            "type": "urn:tag:ambience:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:amenity:qloo:wheelchair_access",
+            "name": "Wheelchair access",
+            "type": "urn:tag:amenity:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:service_options:place:dine_in",
+            "name": "Dine in",
+            "type": "urn:tag:service_options:place",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:cuisine:qloo:indian_fusion",
+            "name": "Indian fusion",
+            "type": "urn:tag:cuisine:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:dining_options:place:dinner",
+            "name": "Dinner",
+            "type": "urn:tag:dining_options:place",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:time_of_day_fit:qloo:morning",
+            "name": "Morning",
+            "type": "urn:tag:time_of_day_fit:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:customer_identity:qloo:families",
+            "name": "Families",
+            "type": "urn:tag:customer_identity:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:offerings:place:dishes",
+            "name": "Dishes",
+            "type": "urn:tag:offerings:place",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:service_options:place:outdoor_seating",
+            "name": "Outdoor seating",
+            "type": "urn:tag:service_options:place",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:dietary_option:qloo:jain",
+            "name": "Jain",
+            "type": "urn:tag:dietary_option:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:beverage_offering:qloo:smoothies",
+            "name": "Smoothies",
+            "type": "urn:tag:beverage_offering:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:genre:place:restaurant:italian",
+            "name": "Italian",
+            "type": "urn:tag:genre:place",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:cuisine:qloo:italian",
+            "name": "Italian",
+            "type": "urn:tag:cuisine:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:payments:place:debit_cards",
+            "name": "Debit cards",
+            "type": "urn:tag:payments:place",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:offerings:place:beer",
+            "name": "Beer",
+            "type": "urn:tag:offerings:place",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:parking:place:free_street_parking",
+            "name": "Free street parking",
+            "type": "urn:tag:parking:place",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:neighborhood_characteristic:qloo:historic",
+            "name": "Historic",
+            "type": "urn:tag:neighborhood_characteristic:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:culinary_style:qloo:casual",
+            "name": "Casual",
+            "type": "urn:tag:culinary_style:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:offerings:place:alcohol",
+            "name": "Alcohol",
+            "type": "urn:tag:offerings:place",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:accessibility:place:wheelchair_accessible_restroom",
+            "name": "Wheelchair accessible restroom",
+            "type": "urn:tag:accessibility:place",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:cuisine:qloo:seafood",
+            "name": "Seafood",
+            "type": "urn:tag:cuisine:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:cuisine:qloo:international",
+            "name": "International",
+            "type": "urn:tag:cuisine:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:dining_options:place:dessert",
+            "name": "Dessert",
+            "type": "urn:tag:dining_options:place",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:beverage_offering:qloo:wine",
+            "name": "Wine",
+            "type": "urn:tag:beverage_offering:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:beverage_offering:qloo:coffee_and_tea",
+            "name": "Coffee and tea",
+            "type": "urn:tag:beverage_offering:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:parking:place:parking",
+            "name": "Parking",
+            "type": "urn:tag:parking:place",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:genre:place:restaurant",
+            "name": "Restaurant",
+            "type": "urn:tag:genre:place",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:event:place:work_dinner",
+            "name": "Work dinner",
+            "type": "urn:tag:event:place",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:ambience:place:large_group",
+            "name": "Large group",
+            "type": "urn:tag:ambience:place",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:time_of_day_fit:qloo:afternoon",
+            "name": "Afternoon",
+            "type": "urn:tag:time_of_day_fit:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:neighborhood_characteristic:qloo:trendy",
+            "name": "Trendy",
+            "type": "urn:tag:neighborhood_characteristic:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:cuisine:qloo:pizza",
+            "name": "Pizza",
+            "type": "urn:tag:cuisine:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:time_of_day_fit:qloo:evening",
+            "name": "Evening",
+            "type": "urn:tag:time_of_day_fit:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:setting:qloo:waterfront",
+            "name": "Waterfront",
+            "type": "urn:tag:setting:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:visit_intent:qloo:special_occasion",
+            "name": "Special occasion",
+            "type": "urn:tag:visit_intent:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:dining_options:place:order_ahead",
+            "name": "Order ahead",
+            "type": "urn:tag:dining_options:place",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:ambience:qloo:stylish",
+            "name": "Stylish",
+            "type": "urn:tag:ambience:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:beverage_offering:qloo:soft_drinks",
+            "name": "Soft drinks",
+            "type": "urn:tag:beverage_offering:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:menu_highlight:qloo:pasta",
+            "name": "Pasta",
+            "type": "urn:tag:menu_highlight:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:accessibility:place:wheelchair_accessible_seating",
+            "name": "Wheelchair accessible seating",
+            "type": "urn:tag:accessibility:place",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:activity_type:qloo:dining_drinking",
+            "name": "Dining drinking",
+            "type": "urn:tag:activity_type:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:offerings:place:quick_bite",
+            "name": "Quick bite",
+            "type": "urn:tag:offerings:place",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:inclusivity:place:lgbtq_friendly",
+            "name": "Lgbtq+ friendly",
+            "type": "urn:tag:inclusivity:place",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:culinary_style:qloo:artisanal",
+            "name": "Artisanal",
+            "type": "urn:tag:culinary_style:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:not_for_display:place:staff_wear_masks",
+            "name": "Staff wear masks",
+            "type": "urn:tag:not_for_display:place",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:service_type:qloo:private_dining",
+            "name": "Private dining",
+            "type": "urn:tag:service_type:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:neighborhood_characteristic:qloo:scenic",
+            "name": "Scenic",
+            "type": "urn:tag:neighborhood_characteristic:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:decor:qloo:classic",
+            "name": "Classic",
+            "type": "urn:tag:decor:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:service_type:qloo:delivery",
+            "name": "Delivery",
+            "type": "urn:tag:service_type:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:children:place:has_changing_tables",
+            "name": "Has changing table s",
+            "type": "urn:tag:children:place",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:service_type:qloo:outdoor_seating",
+            "name": "Outdoor seating",
+            "type": "urn:tag:service_type:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:children:place:good_for_kids",
+            "name": "Good for kids",
+            "type": "urn:tag:children:place",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:interests:qloo:art_deco_architecture",
+            "name": "Art deco architecture",
+            "type": "urn:tag:interests:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:menu_highlight:qloo:deep_dish_pizza",
+            "name": "Deep dish pizza",
+            "type": "urn:tag:menu_highlight:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:offerings:place:small_plates",
+            "name": "Small plates",
+            "type": "urn:tag:offerings:place",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:accessibility:place:wheelchair_accessible_parking_lot",
+            "name": "Wheelchair accessible parking lot",
+            "type": "urn:tag:accessibility:place",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:service_options:place:takeout",
+            "name": "Takeout",
+            "type": "urn:tag:service_options:place",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:category:place:pizza_restaurant",
+            "name": "Pizza restaurant",
+            "type": "urn:tag:category:place",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:setting:qloo:promenade",
+            "name": "Promenade",
+            "type": "urn:tag:setting:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:specialty_dish:place:pizza_by_the_bay",
+            "name": "Pizza by the bay",
+            "type": "urn:tag:specialty_dish:place",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:interests:qloo:italian_cuisine",
+            "name": "Italian cuisine",
+            "type": "urn:tag:interests:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:event:place:anniversary",
+            "name": "Anniversary",
+            "type": "urn:tag:event:place",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:view:qloo:sunset_view",
+            "name": "Sunset view",
+            "type": "urn:tag:view:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:neighborhood_characteristic:qloo:prime_location",
+            "name": "Prime location",
+            "type": "urn:tag:neighborhood_characteristic:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:visit_intent:qloo:destination",
+            "name": "Destination",
+            "type": "urn:tag:visit_intent:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:dining_options:place:counter_seating",
+            "name": "Counter seating",
+            "type": "urn:tag:dining_options:place",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:category:place:italian_restaurant",
+            "name": "Italian restaurant",
+            "type": "urn:tag:category:place",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:amenity:qloo:private_dining",
+            "name": "Private dining",
+            "type": "urn:tag:amenity:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:children:place:high_chairs",
+            "name": "High chairs",
+            "type": "urn:tag:children:place",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:nearby_attraction:qloo:k_rustom_ice_cream",
+            "name": "K rustom ice cream",
+            "type": "urn:tag:nearby_attraction:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:ambience:qloo:romantic",
+            "name": "Romantic",
+            "type": "urn:tag:ambience:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:menu_highlight:qloo:bombay_french_toast",
+            "name": "Bombay french toast",
+            "type": "urn:tag:menu_highlight:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:dining_options:place:brunch",
+            "name": "Brunch",
+            "type": "urn:tag:dining_options:place",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:neighborhood_characteristic:qloo:romantic",
+            "name": "Romantic",
+            "type": "urn:tag:neighborhood_characteristic:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:offerings:place:vegan_options",
+            "name": "Vegan meals",
+            "type": "urn:tag:offerings:place",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:payments:place:credit_cards",
+            "name": "Credit cards",
+            "type": "urn:tag:payments:place",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:service_options:place:delivery",
+            "name": "Delivery",
+            "type": "urn:tag:service_options:place",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:amenity:qloo:full_bar",
+            "name": "Full bar",
+            "type": "urn:tag:amenity:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:age_range:qloo:30_34",
+            "name": "30 34",
+            "type": "urn:tag:age_range:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:not_for_display:place:staff_required_to_disinfect_surfaces_between_visits",
+            "name": "Staff required to disinfect surfaces between visits",
+            "type": "urn:tag:not_for_display:place",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:genre:place",
+            "name": "Place",
+            "type": "urn:tag:genre:place",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:beverage_offering:qloo:fresh_juices",
+            "name": "Fresh juices",
+            "type": "urn:tag:beverage_offering:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:activity_type:qloo:people_watching",
+            "name": "People watching",
+            "type": "urn:tag:activity_type:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:dietary_option:qloo:vegetarian",
+            "name": "Vegetarian",
+            "type": "urn:tag:dietary_option:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:payments:place:price_level",
+            "name": "Price level",
+            "type": "urn:tag:payments:place",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:noise_level:qloo:loud",
+            "name": "Loud",
+            "type": "urn:tag:noise_level:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:credit_card:place:mastercard",
+            "name": "Mastercard",
+            "type": "urn:tag:credit_card:place",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:menu_highlight:qloo:devil_s_delight_pizza",
+            "name": "Devils delight pizza",
+            "type": "urn:tag:menu_highlight:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:children:place:kids_menu",
+            "name": "Kids menu",
+            "type": "urn:tag:children:place",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:time_of_day_fit:qloo:midday",
+            "name": "Midday",
+            "type": "urn:tag:time_of_day_fit:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:amenities:place:restroom",
+            "name": "Restroom",
+            "type": "urn:tag:amenities:place",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:decor:qloo:art_deco",
+            "name": "Art deco",
+            "type": "urn:tag:decor:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:customer_identity:qloo:tourists",
+            "name": "Tourists",
+            "type": "urn:tag:customer_identity:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:neighborhood_characteristic:qloo:touristic",
+            "name": "Touristic",
+            "type": "urn:tag:neighborhood_characteristic:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:offerings:place:vegetarian_options",
+            "name": "Vegetarian meals",
+            "type": "urn:tag:offerings:place",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:genre:place:restaurant:breakfast",
+            "name": "Breakfast",
+            "type": "urn:tag:genre:place",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:service_type:qloo:takeout",
+            "name": "Takeout",
+            "type": "urn:tag:service_type:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:setting:qloo:urban",
+            "name": "Urban",
+            "type": "urn:tag:setting:qloo",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:offerings:place:coffee",
+            "name": "Coffee",
+            "type": "urn:tag:offerings:place",
+            "weight": null
+          },
+          {
+            "id": "urn:tag:offerings:place:happy_hour_drinks",
+            "name": "Happy hour drinks",
+            "type": "urn:tag:offerings:place",
+            "weight": null
+          }
+        ],
+        "references": null,
+        "query": {
+          "distance": 0,
+          "measurements": {
+            "audience_growth": -1.5429085525783548
+          }
+        },
+        "disambiguation": "Soona Mahal 143, Marine Dr, Churchgate Mumbai, Maharashtra 400020 India",
+        "external": {
+          "tripadvisor": [
+            {
+              "id": "d1139197",
+              "rating": 4,
+              "rating_count": 1396
+            }
+          ],
+          "google_place": [
+            {
+              "id": "a26cabde8d5d5c91",
+              "place_id": "ChIJLf8zWebR5zsRkVxdjd6rbKI"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "query": {
+    "localities": {
+      "filter": [
+        {
+          "entity_id": "341FE4F4-6424-438B-A509-8CE5FD5CE26D",
+          "name": "Mumbai",
+          "subtype": "urn:entity:locality",
+          "location": {
+            "lat": 19.1187716324791,
+            "lon": 72.8708401818423
+          },
+          "popularity": 0.9998751,
+          "disambiguation": "Mumbai, Mumbai, Maharashtra, India"
+        }
+      ]
+    }
+  }
+}

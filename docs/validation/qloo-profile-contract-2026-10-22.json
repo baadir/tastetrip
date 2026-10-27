@@ -1,0 +1,63 @@
+{
+  "date": "2026-10-22",
+  "checks": [
+    {
+      "option": "urn:tag:genre:place:restaurant:italian",
+      "mode": "soft",
+      "success": true,
+      "count": 2
+    },
+    {
+      "option": "urn:tag:genre:place:restaurant:japanese",
+      "mode": "soft",
+      "success": true,
+      "count": 2
+    },
+    {
+      "option": "urn:tag:genre:place:restaurant:turkish",
+      "mode": "soft",
+      "success": true,
+      "count": 2
+    },
+    {
+      "option": "urn:tag:ambience:qloo:quiet",
+      "mode": "soft",
+      "success": true,
+      "count": 2
+    },
+    {
+      "option": "urn:tag:ambience:qloo:romantic",
+      "mode": "soft",
+      "success": true,
+      "count": 2
+    },
+    {
+      "option": "urn:tag:service_options:place:outdoor_seating",
+      "mode": "soft",
+      "success": true,
+      "count": 2
+    },
+    {
+      "option": "urn:tag:dietary_option:qloo:vegan",
+      "mode": "soft",
+      "success": true,
+      "count": 2
+    },
+    {
+      "option": "urn:tag:dietary_option:qloo:halal",
+      "mode": "soft",
+      "success": true,
+      "count": 2
+    },
+    {
+      "mode": "required_vegan",
+      "count": 3,
+      "all_tagged": true
+    },
+    {
+      "mode": "exclude_entity",
+      "count": 3,
+      "excluded_absent": true
+    }
+  ]
+}

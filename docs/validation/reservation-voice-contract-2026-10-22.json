@@ -1,0 +1,16 @@
+[
+  {
+    "model": "eleven_flash_v2_5",
+    "language": "tr",
+    "status": 200,
+    "ulaw_bytes": 11146,
+    "audio_format": "ulaw_8000"
+  },
+  {
+    "model": "eleven_v3",
+    "language": "af",
+    "status": 200,
+    "ulaw_bytes": 8960,
+    "audio_format": "ulaw_8000"
+  }
+]

@@ -1,0 +1,210 @@
+{
+  "phase": "followup",
+  "calls": 7,
+  "hotel_tag_lookup": {
+    "http": 200,
+    "seconds": 0.58,
+    "matching_tags": [
+      {
+        "name": "Hotel",
+        "id": "urn:tag:genre:place:hotel"
+      },
+      {
+        "name": "Hotel",
+        "id": "urn:tag:category:place:hotel"
+      },
+      {
+        "name": "Hotel",
+        "id": "urn:tag:category:wikidata:hotel"
+      },
+      {
+        "name": "Hotel",
+        "id": "urn:tag:genre:place:restaurant:hotel"
+      },
+      {
+        "name": "Hotel",
+        "id": "urn:tag:setting:qloo:hotel"
+      },
+      {
+        "name": "Hotel",
+        "id": "urn:tag:genre:brand:travel:hotel"
+      },
+      {
+        "name": "Hotel",
+        "id": "urn:tag:keyword:qloo:hotel"
+      }
+    ]
+  },
+  "results": [
+    {
+      "case": "Istanbul/exclude_hotel",
+      "params": {
+        "filter.type": "urn:entity:place",
+        "filter.location.query": "Istanbul",
+        "filter.tags": "urn:tag:genre:place:restaurant",
+        "filter.exclude.tags": "urn:tag:genre:place:hotel",
+        "take": 10
+      },
+      "http": 200,
+      "seconds": 1.61,
+      "count": 10,
+      "metadata_nonempty": {
+        "phone": 8,
+        "address": 10,
+        "website": 6,
+        "image": 10,
+        "hours": 10,
+        "price_level": 7,
+        "menu_url": 0,
+        "google_place_id": 10
+      },
+      "primary_genres": {
+        "Shopping mall": 1,
+        "Steak house": 1,
+        "Restaurant": 6,
+        "Community center": 1,
+        "Fast food restaurant": 1
+      },
+      "with_restaurant_tag": 10,
+      "with_hotel_tag": 0,
+      "exact_excluded_tag_present": 0
+    },
+    {
+      "case": "Rome/exclude_hotel",
+      "params": {
+        "filter.type": "urn:entity:place",
+        "filter.location.query": "Rome",
+        "filter.tags": "urn:tag:genre:place:restaurant",
+        "filter.exclude.tags": "urn:tag:genre:place:hotel",
+        "take": 10
+      },
+      "http": 200,
+      "seconds": 1.41,
+      "count": 10,
+      "metadata_nonempty": {
+        "phone": 9,
+        "address": 10,
+        "website": 10,
+        "image": 10,
+        "hours": 10,
+        "price_level": 9,
+        "menu_url": 0,
+        "google_place_id": 10
+      },
+      "primary_genres": {
+        "Roman restaurant": 1,
+        "Outlet mall": 1,
+        "Ice cream shop": 1,
+        "Restaurant": 5,
+        "American restaurant": 1,
+        "Japanese restaurant": 1
+      },
+      "with_restaurant_tag": 10,
+      "with_hotel_tag": 0,
+      "exact_excluded_tag_present": 0
+    },
+    {
+      "case": "Mumbai/exclude_hotel",
+      "params": {
+        "filter.type": "urn:entity:place",
+        "filter.location.query": "Mumbai",
+        "filter.tags": "urn:tag:genre:place:restaurant",
+        "filter.exclude.tags": "urn:tag:genre:place:hotel",
+        "take": 10
+      },
+      "http": 200,
+      "seconds": 1.69,
+      "count": 10,
+      "metadata_nonempty": {
+        "phone": 10,
+        "address": 10,
+        "website": 7,
+        "image": 10,
+        "hours": 10,
+        "price_level": 6,
+        "menu_url": 0,
+        "google_place_id": 10
+      },
+      "primary_genres": {
+        "Shopping mall": 2,
+        "Ice cream shop": 1,
+        "Vegetarian restaurant": 1,
+        "Hotel": 1,
+        "Marathi restaurant": 1,
+        "Cafe": 1,
+        "Bar": 1,
+        "Indian sweets shop": 1,
+        "North Indian restaurant": 1
+      },
+      "with_restaurant_tag": 10,
+      "with_hotel_tag": 0,
+      "exact_excluded_tag_present": 0
+    },
+    {
+      "case": "seed_lookup_vegan",
+      "http": 200,
+      "seconds": 0.7,
+      "count": 1
+    },
+    {
+      "case": "Rome/entity_signal_1",
+      "seed_source": "Mumbai restaurant sample 1",
+      "http": 200,
+      "seconds": 2.27,
+      "count": 10,
+      "metadata_nonempty": {
+        "phone": 9,
+        "address": 10,
+        "website": 8,
+        "image": 10,
+        "hours": 10,
+        "price_level": 7,
+        "menu_url": 1,
+        "google_place_id": 10
+      },
+      "primary_genres": {
+        "Indian restaurant": 4,
+        "Golf course": 1,
+        "Restaurant": 2,
+        "Culinary school": 1,
+        "Italian restaurant": 1,
+        "Ice cream shop": 1
+      },
+      "with_restaurant_tag": 10,
+      "with_hotel_tag": 0,
+      "overlap_with_same_filter_baseline": 0,
+      "same_order_as_baseline": false
+    },
+    {
+      "case": "Rome/entity_signal_2",
+      "seed_source": "Mumbai restaurant sample 2",
+      "http": 200,
+      "seconds": 2.08,
+      "count": 10,
+      "metadata_nonempty": {
+        "phone": 10,
+        "address": 10,
+        "website": 6,
+        "image": 10,
+        "hours": 9,
+        "price_level": 10,
+        "menu_url": 1,
+        "google_place_id": 10
+      },
+      "primary_genres": {
+        "Indian restaurant": 6,
+        "Chinese restaurant": 1,
+        "Italian restaurant": 2,
+        "Restaurant": 1
+      },
+      "with_restaurant_tag": 10,
+      "with_hotel_tag": 0,
+      "overlap_with_same_filter_baseline": 0,
+      "same_order_as_baseline": false
+    },
+    {
+      "case": "seed_distinctness",
+      "distinct": true
+    }
+  ]
+}

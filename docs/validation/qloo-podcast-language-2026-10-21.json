@@ -1,0 +1,1274 @@
+{
+  "date": "2026-10-21",
+  "calls": 14,
+  "results": [
+    {
+      "case": "baseline",
+      "parameters": {
+        "filter.type": "urn:entity:podcast",
+        "take": 5,
+        "signal.interests.entities": "C1EDF39B-AC56-4130-B881-AD93794D9367"
+      },
+      "http": 200,
+      "ids": [
+        "8C8C23CC-B999-4B9B-B2D2-EE7B6E36DD34",
+        "232FE4E6-0D6E-4AD9-BC30-50E5504F6541",
+        "0F2BB3D0-3235-49F9-9C58-4E4756681274",
+        "73A6E0B5-FC01-4F4F-9266-7E47A30BCE3E",
+        "638948FB-583E-4A2F-B22A-3D5C2F8A6E05"
+      ],
+      "names": [
+        "Berner Phone",
+        "Giggly Squad",
+        "Girls Gotta Eat",
+        "Not Skinny But Not Fat",
+        "Sofia with an F"
+      ],
+      "language_fields": [
+        {
+          ".properties.short_descriptions[0].languages": [
+            "de"
+          ],
+          ".properties.short_descriptions[1].languages": [
+            "es"
+          ],
+          ".properties.short_descriptions[2].languages": [
+            "fr"
+          ],
+          ".properties.short_descriptions[3].languages": [
+            "en"
+          ]
+        },
+        {
+          ".properties.short_descriptions[0].languages": [
+            "de"
+          ],
+          ".properties.short_descriptions[1].languages": [
+            "es"
+          ],
+          ".properties.short_descriptions[2].languages": [
+            "fr"
+          ],
+          ".properties.short_descriptions[3].languages": [
+            "en"
+          ]
+        },
+        {
+          ".properties.short_descriptions[0].languages": [
+            "de"
+          ],
+          ".properties.short_descriptions[1].languages": [
+            "es"
+          ],
+          ".properties.short_descriptions[2].languages": [
+            "fr"
+          ],
+          ".properties.short_descriptions[3].languages": [
+            "en"
+          ]
+        },
+        {
+          ".properties.short_descriptions[0].languages": [
+            "de"
+          ],
+          ".properties.short_descriptions[1].languages": [
+            "es"
+          ],
+          ".properties.short_descriptions[2].languages": [
+            "fr"
+          ],
+          ".properties.short_descriptions[3].languages": [
+            "en"
+          ]
+        },
+        {
+          ".properties.short_descriptions[0].languages": [
+            "de"
+          ],
+          ".properties.short_descriptions[1].languages": [
+            "es"
+          ],
+          ".properties.short_descriptions[2].languages": [
+            "fr"
+          ],
+          ".properties.short_descriptions[3].languages": [
+            "en"
+          ]
+        }
+      ],
+      "property_keys": [
+        "akas",
+        "channel",
+        "content_rating",
+        "description",
+        "episode_count",
+        "image",
+        "rating",
+        "release_date",
+        "short_description",
+        "short_descriptions"
+      ],
+      "external_keys": [
+        "itunes",
+        "wikidata"
+      ],
+      "language_tags": [],
+      "tags": [],
+      "same_order_as_baseline": true
+    },
+    {
+      "case": "language=tr",
+      "parameters": {
+        "filter.type": "urn:entity:podcast",
+        "take": 5,
+        "signal.interests.entities": "C1EDF39B-AC56-4130-B881-AD93794D9367",
+        "language": "tr"
+      },
+      "http": 200,
+      "ids": [
+        "8C8C23CC-B999-4B9B-B2D2-EE7B6E36DD34",
+        "232FE4E6-0D6E-4AD9-BC30-50E5504F6541",
+        "0F2BB3D0-3235-49F9-9C58-4E4756681274",
+        "73A6E0B5-FC01-4F4F-9266-7E47A30BCE3E",
+        "638948FB-583E-4A2F-B22A-3D5C2F8A6E05"
+      ],
+      "names": [
+        "Berner Phone",
+        "Giggly Squad",
+        "Girls Gotta Eat",
+        "Not Skinny But Not Fat",
+        "Sofia with an F"
+      ],
+      "language_fields": [
+        {
+          ".properties.short_descriptions[0].languages": [
+            "de"
+          ],
+          ".properties.short_descriptions[1].languages": [
+            "es"
+          ],
+          ".properties.short_descriptions[2].languages": [
+            "fr"
+          ],
+          ".properties.short_descriptions[3].languages": [
+            "en"
+          ]
+        },
+        {
+          ".properties.short_descriptions[0].languages": [
+            "de"
+          ],
+          ".properties.short_descriptions[1].languages": [
+            "es"
+          ],
+          ".properties.short_descriptions[2].languages": [
+            "fr"
+          ],
+          ".properties.short_descriptions[3].languages": [
+            "en"
+          ]
+        },
+        {
+          ".properties.short_descriptions[0].languages": [
+            "de"
+          ],
+          ".properties.short_descriptions[1].languages": [
+            "es"
+          ],
+          ".properties.short_descriptions[2].languages": [
+            "fr"
+          ],
+          ".properties.short_descriptions[3].languages": [
+            "en"
+          ]
+        },
+        {
+          ".properties.short_descriptions[0].languages": [
+            "de"
+          ],
+          ".properties.short_descriptions[1].languages": [
+            "es"
+          ],
+          ".properties.short_descriptions[2].languages": [
+            "fr"
+          ],
+          ".properties.short_descriptions[3].languages": [
+            "en"
+          ]
+        },
+        {
+          ".properties.short_descriptions[0].languages": [
+            "de"
+          ],
+          ".properties.short_descriptions[1].languages": [
+            "es"
+          ],
+          ".properties.short_descriptions[2].languages": [
+            "fr"
+          ],
+          ".properties.short_descriptions[3].languages": [
+            "en"
+          ]
+        }
+      ],
+      "property_keys": [
+        "akas",
+        "channel",
+        "content_rating",
+        "description",
+        "episode_count",
+        "image",
+        "rating",
+        "release_date",
+        "short_description",
+        "short_descriptions"
+      ],
+      "external_keys": [
+        "itunes",
+        "wikidata"
+      ],
+      "language_tags": [],
+      "tags": [],
+      "same_order_as_baseline": true
+    },
+    {
+      "case": "language=en",
+      "parameters": {
+        "filter.type": "urn:entity:podcast",
+        "take": 5,
+        "signal.interests.entities": "C1EDF39B-AC56-4130-B881-AD93794D9367",
+        "language": "en"
+      },
+      "http": 200,
+      "ids": [
+        "8C8C23CC-B999-4B9B-B2D2-EE7B6E36DD34",
+        "232FE4E6-0D6E-4AD9-BC30-50E5504F6541",
+        "0F2BB3D0-3235-49F9-9C58-4E4756681274",
+        "73A6E0B5-FC01-4F4F-9266-7E47A30BCE3E",
+        "638948FB-583E-4A2F-B22A-3D5C2F8A6E05"
+      ],
+      "names": [
+        "Berner Phone",
+        "Giggly Squad",
+        "Girls Gotta Eat",
+        "Not Skinny But Not Fat",
+        "Sofia with an F"
+      ],
+      "language_fields": [
+        {
+          ".properties.short_descriptions[0].languages": [
+            "de"
+          ],
+          ".properties.short_descriptions[1].languages": [
+            "es"
+          ],
+          ".properties.short_descriptions[2].languages": [
+            "fr"
+          ],
+          ".properties.short_descriptions[3].languages": [
+            "en"
+          ]
+        },
+        {
+          ".properties.short_descriptions[0].languages": [
+            "de"
+          ],
+          ".properties.short_descriptions[1].languages": [
+            "es"
+          ],
+          ".properties.short_descriptions[2].languages": [
+            "fr"
+          ],
+          ".properties.short_descriptions[3].languages": [
+            "en"
+          ]
+        },
+        {
+          ".properties.short_descriptions[0].languages": [
+            "de"
+          ],
+          ".properties.short_descriptions[1].languages": [
+            "es"
+          ],
+          ".properties.short_descriptions[2].languages": [
+            "fr"
+          ],
+          ".properties.short_descriptions[3].languages": [
+            "en"
+          ]
+        },
+        {
+          ".properties.short_descriptions[0].languages": [
+            "de"
+          ],
+          ".properties.short_descriptions[1].languages": [
+            "es"
+          ],
+          ".properties.short_descriptions[2].languages": [
+            "fr"
+          ],
+          ".properties.short_descriptions[3].languages": [
+            "en"
+          ]
+        },
+        {
+          ".properties.short_descriptions[0].languages": [
+            "de"
+          ],
+          ".properties.short_descriptions[1].languages": [
+            "es"
+          ],
+          ".properties.short_descriptions[2].languages": [
+            "fr"
+          ],
+          ".properties.short_descriptions[3].languages": [
+            "en"
+          ]
+        }
+      ],
+      "property_keys": [
+        "akas",
+        "channel",
+        "content_rating",
+        "description",
+        "episode_count",
+        "image",
+        "rating",
+        "release_date",
+        "short_description",
+        "short_descriptions"
+      ],
+      "external_keys": [
+        "itunes",
+        "wikidata"
+      ],
+      "language_tags": [],
+      "tags": [],
+      "same_order_as_baseline": true
+    },
+    {
+      "case": "language=zz",
+      "parameters": {
+        "filter.type": "urn:entity:podcast",
+        "take": 5,
+        "signal.interests.entities": "C1EDF39B-AC56-4130-B881-AD93794D9367",
+        "language": "zz"
+      },
+      "http": 200,
+      "ids": [
+        "8C8C23CC-B999-4B9B-B2D2-EE7B6E36DD34",
+        "232FE4E6-0D6E-4AD9-BC30-50E5504F6541",
+        "0F2BB3D0-3235-49F9-9C58-4E4756681274",
+        "73A6E0B5-FC01-4F4F-9266-7E47A30BCE3E",
+        "638948FB-583E-4A2F-B22A-3D5C2F8A6E05"
+      ],
+      "names": [
+        "Berner Phone",
+        "Giggly Squad",
+        "Girls Gotta Eat",
+        "Not Skinny But Not Fat",
+        "Sofia with an F"
+      ],
+      "language_fields": [
+        {
+          ".properties.short_descriptions[0].languages": [
+            "de"
+          ],
+          ".properties.short_descriptions[1].languages": [
+            "es"
+          ],
+          ".properties.short_descriptions[2].languages": [
+            "fr"
+          ],
+          ".properties.short_descriptions[3].languages": [
+            "en"
+          ]
+        },
+        {
+          ".properties.short_descriptions[0].languages": [
+            "de"
+          ],
+          ".properties.short_descriptions[1].languages": [
+            "es"
+          ],
+          ".properties.short_descriptions[2].languages": [
+            "fr"
+          ],
+          ".properties.short_descriptions[3].languages": [
+            "en"
+          ]
+        },
+        {
+          ".properties.short_descriptions[0].languages": [
+            "de"
+          ],
+          ".properties.short_descriptions[1].languages": [
+            "es"
+          ],
+          ".properties.short_descriptions[2].languages": [
+            "fr"
+          ],
+          ".properties.short_descriptions[3].languages": [
+            "en"
+          ]
+        },
+        {
+          ".properties.short_descriptions[0].languages": [
+            "de"
+          ],
+          ".properties.short_descriptions[1].languages": [
+            "es"
+          ],
+          ".properties.short_descriptions[2].languages": [
+            "fr"
+          ],
+          ".properties.short_descriptions[3].languages": [
+            "en"
+          ]
+        },
+        {
+          ".properties.short_descriptions[0].languages": [
+            "de"
+          ],
+          ".properties.short_descriptions[1].languages": [
+            "es"
+          ],
+          ".properties.short_descriptions[2].languages": [
+            "fr"
+          ],
+          ".properties.short_descriptions[3].languages": [
+            "en"
+          ]
+        }
+      ],
+      "property_keys": [
+        "akas",
+        "channel",
+        "content_rating",
+        "description",
+        "episode_count",
+        "image",
+        "rating",
+        "release_date",
+        "short_description",
+        "short_descriptions"
+      ],
+      "external_keys": [
+        "itunes",
+        "wikidata"
+      ],
+      "language_tags": [],
+      "tags": [],
+      "same_order_as_baseline": true
+    },
+    {
+      "case": "filter.language=tr",
+      "parameters": {
+        "filter.type": "urn:entity:podcast",
+        "take": 5,
+        "signal.interests.entities": "C1EDF39B-AC56-4130-B881-AD93794D9367",
+        "filter.language": "tr"
+      },
+      "http": 200,
+      "ids": [
+        "8C8C23CC-B999-4B9B-B2D2-EE7B6E36DD34",
+        "232FE4E6-0D6E-4AD9-BC30-50E5504F6541",
+        "0F2BB3D0-3235-49F9-9C58-4E4756681274",
+        "73A6E0B5-FC01-4F4F-9266-7E47A30BCE3E",
+        "638948FB-583E-4A2F-B22A-3D5C2F8A6E05"
+      ],
+      "names": [
+        "Berner Phone",
+        "Giggly Squad",
+        "Girls Gotta Eat",
+        "Not Skinny But Not Fat",
+        "Sofia with an F"
+      ],
+      "language_fields": [
+        {
+          ".properties.short_descriptions[0].languages": [
+            "de"
+          ],
+          ".properties.short_descriptions[1].languages": [
+            "es"
+          ],
+          ".properties.short_descriptions[2].languages": [
+            "fr"
+          ],
+          ".properties.short_descriptions[3].languages": [
+            "en"
+          ]
+        },
+        {
+          ".properties.short_descriptions[0].languages": [
+            "de"
+          ],
+          ".properties.short_descriptions[1].languages": [
+            "es"
+          ],
+          ".properties.short_descriptions[2].languages": [
+            "fr"
+          ],
+          ".properties.short_descriptions[3].languages": [
+            "en"
+          ]
+        },
+        {
+          ".properties.short_descriptions[0].languages": [
+            "de"
+          ],
+          ".properties.short_descriptions[1].languages": [
+            "es"
+          ],
+          ".properties.short_descriptions[2].languages": [
+            "fr"
+          ],
+          ".properties.short_descriptions[3].languages": [
+            "en"
+          ]
+        },
+        {
+          ".properties.short_descriptions[0].languages": [
+            "de"
+          ],
+          ".properties.short_descriptions[1].languages": [
+            "es"
+          ],
+          ".properties.short_descriptions[2].languages": [
+            "fr"
+          ],
+          ".properties.short_descriptions[3].languages": [
+            "en"
+          ]
+        },
+        {
+          ".properties.short_descriptions[0].languages": [
+            "de"
+          ],
+          ".properties.short_descriptions[1].languages": [
+            "es"
+          ],
+          ".properties.short_descriptions[2].languages": [
+            "fr"
+          ],
+          ".properties.short_descriptions[3].languages": [
+            "en"
+          ]
+        }
+      ],
+      "property_keys": [
+        "akas",
+        "channel",
+        "content_rating",
+        "description",
+        "episode_count",
+        "image",
+        "rating",
+        "release_date",
+        "short_description",
+        "short_descriptions"
+      ],
+      "external_keys": [
+        "itunes",
+        "wikidata"
+      ],
+      "language_tags": [],
+      "tags": [],
+      "same_order_as_baseline": true
+    },
+    {
+      "case": "filter.language=en",
+      "parameters": {
+        "filter.type": "urn:entity:podcast",
+        "take": 5,
+        "signal.interests.entities": "C1EDF39B-AC56-4130-B881-AD93794D9367",
+        "filter.language": "en"
+      },
+      "http": 200,
+      "ids": [
+        "8C8C23CC-B999-4B9B-B2D2-EE7B6E36DD34",
+        "232FE4E6-0D6E-4AD9-BC30-50E5504F6541",
+        "0F2BB3D0-3235-49F9-9C58-4E4756681274",
+        "73A6E0B5-FC01-4F4F-9266-7E47A30BCE3E",
+        "638948FB-583E-4A2F-B22A-3D5C2F8A6E05"
+      ],
+      "names": [
+        "Berner Phone",
+        "Giggly Squad",
+        "Girls Gotta Eat",
+        "Not Skinny But Not Fat",
+        "Sofia with an F"
+      ],
+      "language_fields": [
+        {
+          ".properties.short_descriptions[0].languages": [
+            "de"
+          ],
+          ".properties.short_descriptions[1].languages": [
+            "es"
+          ],
+          ".properties.short_descriptions[2].languages": [
+            "fr"
+          ],
+          ".properties.short_descriptions[3].languages": [
+            "en"
+          ]
+        },
+        {
+          ".properties.short_descriptions[0].languages": [
+            "de"
+          ],
+          ".properties.short_descriptions[1].languages": [
+            "es"
+          ],
+          ".properties.short_descriptions[2].languages": [
+            "fr"
+          ],
+          ".properties.short_descriptions[3].languages": [
+            "en"
+          ]
+        },
+        {
+          ".properties.short_descriptions[0].languages": [
+            "de"
+          ],
+          ".properties.short_descriptions[1].languages": [
+            "es"
+          ],
+          ".properties.short_descriptions[2].languages": [
+            "fr"
+          ],
+          ".properties.short_descriptions[3].languages": [
+            "en"
+          ]
+        },
+        {
+          ".properties.short_descriptions[0].languages": [
+            "de"
+          ],
+          ".properties.short_descriptions[1].languages": [
+            "es"
+          ],
+          ".properties.short_descriptions[2].languages": [
+            "fr"
+          ],
+          ".properties.short_descriptions[3].languages": [
+            "en"
+          ]
+        },
+        {
+          ".properties.short_descriptions[0].languages": [
+            "de"
+          ],
+          ".properties.short_descriptions[1].languages": [
+            "es"
+          ],
+          ".properties.short_descriptions[2].languages": [
+            "fr"
+          ],
+          ".properties.short_descriptions[3].languages": [
+            "en"
+          ]
+        }
+      ],
+      "property_keys": [
+        "akas",
+        "channel",
+        "content_rating",
+        "description",
+        "episode_count",
+        "image",
+        "rating",
+        "release_date",
+        "short_description",
+        "short_descriptions"
+      ],
+      "external_keys": [
+        "itunes",
+        "wikidata"
+      ],
+      "language_tags": [],
+      "tags": [],
+      "same_order_as_baseline": true
+    },
+    {
+      "case": "filter.language=zz",
+      "parameters": {
+        "filter.type": "urn:entity:podcast",
+        "take": 5,
+        "signal.interests.entities": "C1EDF39B-AC56-4130-B881-AD93794D9367",
+        "filter.language": "zz"
+      },
+      "http": 200,
+      "ids": [
+        "8C8C23CC-B999-4B9B-B2D2-EE7B6E36DD34",
+        "232FE4E6-0D6E-4AD9-BC30-50E5504F6541",
+        "0F2BB3D0-3235-49F9-9C58-4E4756681274",
+        "73A6E0B5-FC01-4F4F-9266-7E47A30BCE3E",
+        "638948FB-583E-4A2F-B22A-3D5C2F8A6E05"
+      ],
+      "names": [
+        "Berner Phone",
+        "Giggly Squad",
+        "Girls Gotta Eat",
+        "Not Skinny But Not Fat",
+        "Sofia with an F"
+      ],
+      "language_fields": [
+        {
+          ".properties.short_descriptions[0].languages": [
+            "de"
+          ],
+          ".properties.short_descriptions[1].languages": [
+            "es"
+          ],
+          ".properties.short_descriptions[2].languages": [
+            "fr"
+          ],
+          ".properties.short_descriptions[3].languages": [
+            "en"
+          ]
+        },
+        {
+          ".properties.short_descriptions[0].languages": [
+            "de"
+          ],
+          ".properties.short_descriptions[1].languages": [
+            "es"
+          ],
+          ".properties.short_descriptions[2].languages": [
+            "fr"
+          ],
+          ".properties.short_descriptions[3].languages": [
+            "en"
+          ]
+        },
+        {
+          ".properties.short_descriptions[0].languages": [
+            "de"
+          ],
+          ".properties.short_descriptions[1].languages": [
+            "es"
+          ],
+          ".properties.short_descriptions[2].languages": [
+            "fr"
+          ],
+          ".properties.short_descriptions[3].languages": [
+            "en"
+          ]
+        },
+        {
+          ".properties.short_descriptions[0].languages": [
+            "de"
+          ],
+          ".properties.short_descriptions[1].languages": [
+            "es"
+          ],
+          ".properties.short_descriptions[2].languages": [
+            "fr"
+          ],
+          ".properties.short_descriptions[3].languages": [
+            "en"
+          ]
+        },
+        {
+          ".properties.short_descriptions[0].languages": [
+            "de"
+          ],
+          ".properties.short_descriptions[1].languages": [
+            "es"
+          ],
+          ".properties.short_descriptions[2].languages": [
+            "fr"
+          ],
+          ".properties.short_descriptions[3].languages": [
+            "en"
+          ]
+        }
+      ],
+      "property_keys": [
+        "akas",
+        "channel",
+        "content_rating",
+        "description",
+        "episode_count",
+        "image",
+        "rating",
+        "release_date",
+        "short_description",
+        "short_descriptions"
+      ],
+      "external_keys": [
+        "itunes",
+        "wikidata"
+      ],
+      "language_tags": [],
+      "tags": [],
+      "same_order_as_baseline": true
+    },
+    {
+      "case": "filter.languages=tr",
+      "parameters": {
+        "filter.type": "urn:entity:podcast",
+        "take": 5,
+        "signal.interests.entities": "C1EDF39B-AC56-4130-B881-AD93794D9367",
+        "filter.languages": "tr"
+      },
+      "http": 200,
+      "ids": [
+        "8C8C23CC-B999-4B9B-B2D2-EE7B6E36DD34",
+        "232FE4E6-0D6E-4AD9-BC30-50E5504F6541",
+        "0F2BB3D0-3235-49F9-9C58-4E4756681274",
+        "73A6E0B5-FC01-4F4F-9266-7E47A30BCE3E",
+        "638948FB-583E-4A2F-B22A-3D5C2F8A6E05"
+      ],
+      "names": [
+        "Berner Phone",
+        "Giggly Squad",
+        "Girls Gotta Eat",
+        "Not Skinny But Not Fat",
+        "Sofia with an F"
+      ],
+      "language_fields": [
+        {
+          ".properties.short_descriptions[0].languages": [
+            "de"
+          ],
+          ".properties.short_descriptions[1].languages": [
+            "es"
+          ],
+          ".properties.short_descriptions[2].languages": [
+            "fr"
+          ],
+          ".properties.short_descriptions[3].languages": [
+            "en"
+          ]
+        },
+        {
+          ".properties.short_descriptions[0].languages": [
+            "de"
+          ],
+          ".properties.short_descriptions[1].languages": [
+            "es"
+          ],
+          ".properties.short_descriptions[2].languages": [
+            "fr"
+          ],
+          ".properties.short_descriptions[3].languages": [
+            "en"
+          ]
+        },
+        {
+          ".properties.short_descriptions[0].languages": [
+            "de"
+          ],
+          ".properties.short_descriptions[1].languages": [
+            "es"
+          ],
+          ".properties.short_descriptions[2].languages": [
+            "fr"
+          ],
+          ".properties.short_descriptions[3].languages": [
+            "en"
+          ]
+        },
+        {
+          ".properties.short_descriptions[0].languages": [
+            "de"
+          ],
+          ".properties.short_descriptions[1].languages": [
+            "es"
+          ],
+          ".properties.short_descriptions[2].languages": [
+            "fr"
+          ],
+          ".properties.short_descriptions[3].languages": [
+            "en"
+          ]
+        },
+        {
+          ".properties.short_descriptions[0].languages": [
+            "de"
+          ],
+          ".properties.short_descriptions[1].languages": [
+            "es"
+          ],
+          ".properties.short_descriptions[2].languages": [
+            "fr"
+          ],
+          ".properties.short_descriptions[3].languages": [
+            "en"
+          ]
+        }
+      ],
+      "property_keys": [
+        "akas",
+        "channel",
+        "content_rating",
+        "description",
+        "episode_count",
+        "image",
+        "rating",
+        "release_date",
+        "short_description",
+        "short_descriptions"
+      ],
+      "external_keys": [
+        "itunes",
+        "wikidata"
+      ],
+      "language_tags": [],
+      "tags": [],
+      "same_order_as_baseline": true
+    },
+    {
+      "case": "filter.language_code=tr",
+      "parameters": {
+        "filter.type": "urn:entity:podcast",
+        "take": 5,
+        "signal.interests.entities": "C1EDF39B-AC56-4130-B881-AD93794D9367",
+        "filter.language_code": "tr"
+      },
+      "http": 200,
+      "ids": [
+        "8C8C23CC-B999-4B9B-B2D2-EE7B6E36DD34",
+        "232FE4E6-0D6E-4AD9-BC30-50E5504F6541",
+        "0F2BB3D0-3235-49F9-9C58-4E4756681274",
+        "73A6E0B5-FC01-4F4F-9266-7E47A30BCE3E",
+        "638948FB-583E-4A2F-B22A-3D5C2F8A6E05"
+      ],
+      "names": [
+        "Berner Phone",
+        "Giggly Squad",
+        "Girls Gotta Eat",
+        "Not Skinny But Not Fat",
+        "Sofia with an F"
+      ],
+      "language_fields": [
+        {
+          ".properties.short_descriptions[0].languages": [
+            "de"
+          ],
+          ".properties.short_descriptions[1].languages": [
+            "es"
+          ],
+          ".properties.short_descriptions[2].languages": [
+            "fr"
+          ],
+          ".properties.short_descriptions[3].languages": [
+            "en"
+          ]
+        },
+        {
+          ".properties.short_descriptions[0].languages": [
+            "de"
+          ],
+          ".properties.short_descriptions[1].languages": [
+            "es"
+          ],
+          ".properties.short_descriptions[2].languages": [
+            "fr"
+          ],
+          ".properties.short_descriptions[3].languages": [
+            "en"
+          ]
+        },
+        {
+          ".properties.short_descriptions[0].languages": [
+            "de"
+          ],
+          ".properties.short_descriptions[1].languages": [
+            "es"
+          ],
+          ".properties.short_descriptions[2].languages": [
+            "fr"
+          ],
+          ".properties.short_descriptions[3].languages": [
+            "en"
+          ]
+        },
+        {
+          ".properties.short_descriptions[0].languages": [
+            "de"
+          ],
+          ".properties.short_descriptions[1].languages": [
+            "es"
+          ],
+          ".properties.short_descriptions[2].languages": [
+            "fr"
+          ],
+          ".properties.short_descriptions[3].languages": [
+            "en"
+          ]
+        },
+        {
+          ".properties.short_descriptions[0].languages": [
+            "de"
+          ],
+          ".properties.short_descriptions[1].languages": [
+            "es"
+          ],
+          ".properties.short_descriptions[2].languages": [
+            "fr"
+          ],
+          ".properties.short_descriptions[3].languages": [
+            "en"
+          ]
+        }
+      ],
+      "property_keys": [
+        "akas",
+        "channel",
+        "content_rating",
+        "description",
+        "episode_count",
+        "image",
+        "rating",
+        "release_date",
+        "short_description",
+        "short_descriptions"
+      ],
+      "external_keys": [
+        "itunes",
+        "wikidata"
+      ],
+      "language_tags": [],
+      "tags": [],
+      "same_order_as_baseline": true
+    },
+    {
+      "case": "tag-search:Turkish",
+      "parameters": {
+        "filter.query": "Turkish",
+        "filter.parents.types": "urn:entity:podcast",
+        "take": 10
+      },
+      "http": 200,
+      "ids": [],
+      "names": [],
+      "language_fields": [],
+      "property_keys": [],
+      "external_keys": [],
+      "language_tags": [],
+      "tags": []
+    },
+    {
+      "case": "tag-search:English",
+      "parameters": {
+        "filter.query": "English",
+        "filter.parents.types": "urn:entity:podcast",
+        "take": 10
+      },
+      "http": 200,
+      "ids": [],
+      "names": [],
+      "language_fields": [],
+      "property_keys": [],
+      "external_keys": [],
+      "language_tags": [],
+      "tags": []
+    },
+    {
+      "case": "tag-search:language",
+      "parameters": {
+        "filter.query": "language",
+        "filter.parents.types": "urn:entity:podcast",
+        "take": 10
+      },
+      "http": 200,
+      "ids": [],
+      "names": [],
+      "language_fields": [],
+      "property_keys": [],
+      "external_keys": [],
+      "language_tags": [],
+      "tags": [
+        {
+          "id": "urn:tag:keyword:qloo:language",
+          "name": "Language"
+        },
+        {
+          "id": "urn:tag:genre:media:language_learning",
+          "name": "Language Learning"
+        },
+        {
+          "id": "urn:tag:theme:qloo:language",
+          "name": "Language"
+        },
+        {
+          "id": "urn:tag:keyword:qloo:language_learning",
+          "name": "Language learning"
+        },
+        {
+          "id": "urn:tag:theme:qloo:language_acquisition",
+          "name": "Language Acquisition"
+        },
+        {
+          "id": "urn:tag:audience:qloo:language_enthusiasts",
+          "name": "Language Enthusiasts"
+        },
+        {
+          "id": "urn:tag:subgenre:qloo:language",
+          "name": "Language"
+        },
+        {
+          "id": "urn:tag:subgenre:qloo:language_learning",
+          "name": "Language Learning"
+        }
+      ]
+    },
+    {
+      "case": "tag-search:Turkish language",
+      "parameters": {
+        "filter.query": "Turkish language",
+        "filter.parents.types": "urn:entity:podcast",
+        "take": 10
+      },
+      "http": 200,
+      "ids": [],
+      "names": [],
+      "language_fields": [],
+      "property_keys": [],
+      "external_keys": [],
+      "language_tags": [],
+      "tags": [
+        {
+          "id": "urn:tag:genre:media:language_learning",
+          "name": "Language Learning"
+        }
+      ]
+    },
+    {
+      "case": "baseline-repeat",
+      "parameters": {
+        "filter.type": "urn:entity:podcast",
+        "take": 5,
+        "signal.interests.entities": "C1EDF39B-AC56-4130-B881-AD93794D9367"
+      },
+      "http": 200,
+      "ids": [
+        "8C8C23CC-B999-4B9B-B2D2-EE7B6E36DD34",
+        "232FE4E6-0D6E-4AD9-BC30-50E5504F6541",
+        "0F2BB3D0-3235-49F9-9C58-4E4756681274",
+        "73A6E0B5-FC01-4F4F-9266-7E47A30BCE3E",
+        "638948FB-583E-4A2F-B22A-3D5C2F8A6E05"
+      ],
+      "names": [
+        "Berner Phone",
+        "Giggly Squad",
+        "Girls Gotta Eat",
+        "Not Skinny But Not Fat",
+        "Sofia with an F"
+      ],
+      "language_fields": [
+        {
+          ".properties.short_descriptions[0].languages": [
+            "de"
+          ],
+          ".properties.short_descriptions[1].languages": [
+            "es"
+          ],
+          ".properties.short_descriptions[2].languages": [
+            "fr"
+          ],
+          ".properties.short_descriptions[3].languages": [
+            "en"
+          ]
+        },
+        {
+          ".properties.short_descriptions[0].languages": [
+            "de"
+          ],
+          ".properties.short_descriptions[1].languages": [
+            "es"
+          ],
+          ".properties.short_descriptions[2].languages": [
+            "fr"
+          ],
+          ".properties.short_descriptions[3].languages": [
+            "en"
+          ]
+        },
+        {
+          ".properties.short_descriptions[0].languages": [
+            "de"
+          ],
+          ".properties.short_descriptions[1].languages": [
+            "es"
+          ],
+          ".properties.short_descriptions[2].languages": [
+            "fr"
+          ],
+          ".properties.short_descriptions[3].languages": [
+            "en"
+          ]
+        },
+        {
+          ".properties.short_descriptions[0].languages": [
+            "de"
+          ],
+          ".properties.short_descriptions[1].languages": [
+            "es"
+          ],
+          ".properties.short_descriptions[2].languages": [
+            "fr"
+          ],
+          ".properties.short_descriptions[3].languages": [
+            "en"
+          ]
+        },
+        {
+          ".properties.short_descriptions[0].languages": [
+            "de"
+          ],
+          ".properties.short_descriptions[1].languages": [
+            "es"
+          ],
+          ".properties.short_descriptions[2].languages": [
+            "fr"
+          ],
+          ".properties.short_descriptions[3].languages": [
+            "en"
+          ]
+        }
+      ],
+      "property_keys": [
+        "akas",
+        "channel",
+        "content_rating",
+        "description",
+        "episode_count",
+        "image",
+        "rating",
+        "release_date",
+        "short_description",
+        "short_descriptions"
+      ],
+      "external_keys": [
+        "itunes",
+        "wikidata"
+      ],
+      "language_tags": [],
+      "tags": [],
+      "same_order_as_baseline": true
+    }
+  ],
+  "external_language_checks": [
+    {
+      "itunes_id": "1442257788",
+      "lookup_http": 200,
+      "feed_available": true,
+      "rss_http": 200,
+      "rss_channel_language": "en",
+      "name": "Berner Phone"
+    },
+    {
+      "itunes_id": "1536352412",
+      "lookup_http": 200,
+      "feed_available": true,
+      "rss_http": 200,
+      "rss_channel_language": "en",
+      "name": "Giggly Squad"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "json_action_valid": true,
+  "action": "readback",
+  "approved_readback_used": true,
+  "caption_json_valid": true,
+  "caption_numbers_preserved": true
+}

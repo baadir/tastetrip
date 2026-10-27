@@ -1,0 +1,38 @@
+{
+  "phase": "repeatability",
+  "calls": 5,
+  "seed_lookup_http": [
+    200,
+    200
+  ],
+  "distinct_seeds": true,
+  "same_seed_identical_order": true,
+  "different_seed_identical_order": false,
+  "different_seed_shared_ids": 6,
+  "results": [
+    {
+      "case": "seed1_first",
+      "seed_fingerprint": "b05842b96a62",
+      "http": 200,
+      "seconds": 1.39,
+      "count": 10,
+      "primary_restaurant_count": 8
+    },
+    {
+      "case": "seed1_repeat",
+      "seed_fingerprint": "b05842b96a62",
+      "http": 200,
+      "seconds": 1.36,
+      "count": 10,
+      "primary_restaurant_count": 8
+    },
+    {
+      "case": "seed2",
+      "seed_fingerprint": "ae3188208ae4",
+      "http": 200,
+      "seconds": 1.38,
+      "count": 10,
+      "primary_restaurant_count": 8
+    }
+  ]
+}

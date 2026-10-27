@@ -1,0 +1,54 @@
+services:
+  tastetrip:
+    build: .
+    restart: unless-stopped
+    ports:
+      - '8080:8080'
+    env_file: .env
+    environment:
+      DATA_DIR: /app/data
+    volumes:
+      - tastetrip-data:/app/data
+  voice-gateway:
+    build: .
+    restart: unless-stopped
+    command: ['python', '-m', 'app.voice_gateway']
+    env_file: .env
+    environment:
+      VOICE_GATEWAY_HOST: 0.0.0.0
+      VOICE_GATEWAY_PORT: '8081'
+      RESERVATION_WEB_URL: http://tastetrip:8080
+      DISABLE_DEMO_CALLS: 'true'
+    expose:
+      - '8081'
+    depends_on:
+      tastetrip:
+        condition: service_healthy
+    healthcheck:
+      test: ['CMD', 'python', '-c', "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8081/health',timeout=3)"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+  reservation-worker:
+    build: .
+    restart: unless-stopped
+    command: ['python', '-m', 'app.reservation_worker']
+    env_file: .env
+    environment:
+      DATA_DIR: /app/data
+      VOICE_GATEWAY_INTERNAL_URL: http://voice-gateway:8081
+    volumes:
+      - tastetrip-data:/app/data
+    depends_on:
+      tastetrip:
+        condition: service_healthy
+      voice-gateway:
+        condition: service_healthy
+    healthcheck:
+      test: ['CMD', 'python', '-c', "import sqlite3,time; c=sqlite3.connect('/app/data/tastetrip.sqlite3'); r=c.execute('SELECT at FROM reservation_worker_heartbeat WHERE id=1').fetchone(); c.close(); assert r and time.time()-r[0]<90"]
+      interval: 30s
+      timeout: 5s
+      start_period: 30s
+      retries: 3
+volumes:
+  tastetrip-data:
