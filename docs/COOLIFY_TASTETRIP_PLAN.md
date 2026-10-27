@@ -63,3 +63,7 @@ Mevcut 119 birim test geçti ve yükleme öncesi dosya listesi mevcut yerel API 
 - Domain/Dockerfile/8080 ayarları ve prefiksli kalıcı volume oluşturuldu; Deploy başlatılmadı. Uygulama Exited durumunda; bu başlatılmamış kaynak için yayın başarısı değildir.
 
 28 Ekim kayıt: Yukarıdaki yedi sır olmayan env alanı Coolify runtime-only olarak kaydedildi (buildtime kapalı). Sağlayıcı sırları ve LLM_MODEL henüz eklenmedi.
+
+
+### 28 Ekim güncellemesi — H-075
+Sağlayıcı anahtarları, LLM_MODEL ve ses bağlantısı için 12 boş giriş alanı eklendi; toplam 19 alan runtime-only olarak doğrulandı. Önceki kayıttaki eksik alanlar artık listede mevcut, fakat değerleri henüz girilmedi. Kullanıcı her ilgili satırın değerini girip Update ile kaydetmeli. Deploy başlatılmadı.

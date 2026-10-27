@@ -21,6 +21,8 @@
 
 ## Şimdiki yön
 
+28 Ekim H-075: Coolify Environment Variables listesine 12 boş API/model/ses alanı eklendi; toplam 19 runtime-only alan mevcut. Değerleri kullanıcı girecek; deploy başlatılmadı.
+
 28 Ekim D-034/H-074: Proje github.com/baadir/tastetrip main dalına yüklendi. Coolify Tastetrip/production web kaynağı, HTTPS tastetrip.bahadirciftci.work domaini, Dockerfile/8080, kalıcı /app/data volume ve yedi sır olmayan runtime değişkeni kaydedildi. Deploy başlatılmadı; API sırları/LLM_MODEL ve tam ses servisleri yayın aşamasında tamamlanacak. docs/COOLIFY_TASTETRIP_PLAN.md güncel.
 
 26 Ekim D-033/H-071: Deneyimin bütünü tek konuşma akışında; ayrı açılış/yan menü/form ekranları kaldırıldı. Uçuş ve rezervasyon bilgileri DeepSeek ile konuşmadan alınır; rota, tercih, içerik, güvenli giriş, listeler ve canlı görüşme aynı konuşmada karttır. 117 test; ayrı QA DB ile canlı rezervasyon taslağı/onay kapısı ve uçuş sonucu görüldü. docs/ux/10-complete-conversation.md güncel. Gerçek telefon/deploy yok.

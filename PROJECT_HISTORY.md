@@ -801,3 +801,10 @@ Bir karar değiştiğinde önceki kaydı yeniden yazmak yerine yeni kayıtta “
 - Mevcut 119 unittest geçti. Yerel Docker daemon kapalı olduğu için container build yapılmadı. DNS sorgusunda domain Cloudflare A/AAAA edge adreslerine çözülüyor; bu, origin eşleşmesi veya TLS sertifikası doğrulaması sayılmaz. Deploy düğmesi tıklanmadı, uygulama Exited ve henüz canlı değil. GitHub App/webhook kurulumu yapılmadı; otomatik push→deploy doğrulanmış değildir.
 - docs/COOLIFY_TASTETRIP_PLAN.md web yayın adımları, runtime sırları, DNS/TLS, volume/redeploy/yedek, tek Compose içinde paylaşılan veri ve gateway/worker geçiş planını kaydeder. Ek gateway domaini kullanıcı adına atanmadı. Docker/ARM64 çalışma ve gerçek telefon testi sonraki yayın kontrolüdür.
 - Coolify: https://panel.bahadirciftci.work/project/dy0g44moqkbcxsshesm6k6xl/environment/wugoylfk2w7x1jzujumrk9na/application/wpsrxqjtiwj8w64igmghpk4x . Kaynak: https://github.com/baadir/tastetrip . Sır/tam env içeriği geçmişe yazılmadı.
+
+
+### H-075 — Coolify API giriş alanları hazırlandı
+- Tarih: 28 Ekim 2026. Kullanıcı environment listesinde API alanlarını göremediğini bildirdi. H-074 sırasında yalnız yedi genel değişken vardı.
+- Mevcut Tastetrip web kaynağına 12 boş alan kaydedildi: QLOO_API_KEY, LLM_API_KEY, LLM_MODEL, AVIASALES_API_TOKEN, AVIASALES_PARTNER_ID, TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN, TWILIO_FROM_NUMBER, DEEPGRAM_API_KEY, ELEVENLABS_API_KEY, VOICE_MONITOR_TOKEN, VOICE_PUBLIC_URL.
+- UI üzerinden toplam 19 isim ve tüm alanlarda buildtime kapalı/runtime açık doğrulandı. Yeni alanların değerleri boştur; kullanıcı dolduracak. Yerel sırlar aktarılmadı. Deploy veya telefon araması yapılmadı. Ekran kanıtı: artifacts/deployment/coolify-api-fields-2026-10-28.png.
+- Sonraki adım: Kullanıcı gerekli sağlayıcı değerlerini ve desteklenen LLM_MODEL değerini girip Update ile kaydetmeli; sonrasında yayın kontrolleri yapılabilir. Ses alanlarının bulunması gateway/worker kurulumunun tamamlandığı anlamına gelmez.
