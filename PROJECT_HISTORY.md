@@ -808,3 +808,10 @@ Bir karar değiştiğinde önceki kaydı yeniden yazmak yerine yeni kayıtta “
 - Mevcut Tastetrip web kaynağına 12 boş alan kaydedildi: QLOO_API_KEY, LLM_API_KEY, LLM_MODEL, AVIASALES_API_TOKEN, AVIASALES_PARTNER_ID, TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN, TWILIO_FROM_NUMBER, DEEPGRAM_API_KEY, ELEVENLABS_API_KEY, VOICE_MONITOR_TOKEN, VOICE_PUBLIC_URL.
 - UI üzerinden toplam 19 isim ve tüm alanlarda buildtime kapalı/runtime açık doğrulandı. Yeni alanların değerleri boştur; kullanıcı dolduracak. Yerel sırlar aktarılmadı. Deploy veya telefon araması yapılmadı. Ekran kanıtı: artifacts/deployment/coolify-api-fields-2026-10-28.png.
 - Sonraki adım: Kullanıcı gerekli sağlayıcı değerlerini ve desteklenen LLM_MODEL değerini girip Update ile kaydetmeli; sonrasında yayın kontrolleri yapılabilir. Ses alanlarının bulunması gateway/worker kurulumunun tamamlandığı anlamına gelmez.
+
+
+### H-076 — İlk Coolify web deploymentı tamamlandı
+- Tarih: 28 Ekim 2026 yerel oturum; Coolify logları UTC 27 Ekim 21:13–21:14 gösteriyor. Kullanıcı deployment başlatılmasını açıkça istedi. Deploy UI üzerinden başlatıldı: xfb9j6404vtl2cawynbqcz1y, kaynak main/e55842e2727c077cd910fa5380068405341f56e0.
+- Docker image build tamamlandı, yeni container ilk healthcheck denemesinde başarılı oldu; rolling update tamamlandı ve UI Deployment is Finished / Running (healthy) gösterdi.
+- HTTPS https://tastetrip.bahadirciftci.work/ tarayıcıda sertifika uyarısı olmadan sohbet arayüzünü açtı. /health yanıtı status=ok doğrulandı. Kanıtlar artifacts/deployment/tastetrip-live-2026-10-28.png ve coolify-deployed-2026-10-28.png.
+- API anahtar değerleri okunmadı/aktarılmadı; canlı sağlayıcı sohbet/rota/uçuş, kayıt-redeploy kalıcılığı ve gateway/worker telefon akışı bu turda test edilmedi. Web yayını doğrulandı; tüm ürün entegrasyonları doğrulanmış sayılmaz. Gerçek telefon araması yapılmadı.

@@ -67,3 +67,7 @@ Mevcut 119 birim test geçti ve yükleme öncesi dosya listesi mevcut yerel API 
 
 ### 28 Ekim güncellemesi — H-075
 Sağlayıcı anahtarları, LLM_MODEL ve ses bağlantısı için 12 boş giriş alanı eklendi; toplam 19 alan runtime-only olarak doğrulandı. Önceki kayıttaki eksik alanlar artık listede mevcut, fakat değerleri henüz girilmedi. Kullanıcı her ilgili satırın değerini girip Update ile kaydetmeli. Deploy başlatılmadı.
+
+
+### 28 Ekim ilk yayın — H-076
+Kullanıcı talimatıyla deployment xfb9j6404vtl2cawynbqcz1y başlatılıp tamamlandı. main/e55842e build başarılı; Running (healthy), HTTPS ana sayfa ve /health status=ok görüldü. Önceki deploy başlatılmadı kayıtları tarihsel durumu belirtir. Sağlayıcı işlevleri, redeploy veri kalıcılığı ve ses gateway/worker yayını henüz uçtan uca doğrulanmadı.

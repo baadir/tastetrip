@@ -21,6 +21,8 @@
 
 ## Şimdiki yön
 
+28 Ekim H-076: İlk Coolify web yayını tamamlandı (main/e55842e). Running healthy, HTTPS ana sayfa ve /health status=ok doğrulandı. Canlı sağlayıcı akışları, redeploy kalıcılığı ve gateway/worker ayrıca doğrulanmalı.
+
 28 Ekim H-075: Coolify Environment Variables listesine 12 boş API/model/ses alanı eklendi; toplam 19 runtime-only alan mevcut. Değerleri kullanıcı girecek; deploy başlatılmadı.
 
 28 Ekim D-034/H-074: Proje github.com/baadir/tastetrip main dalına yüklendi. Coolify Tastetrip/production web kaynağı, HTTPS tastetrip.bahadirciftci.work domaini, Dockerfile/8080, kalıcı /app/data volume ve yedi sır olmayan runtime değişkeni kaydedildi. Deploy başlatılmadı; API sırları/LLM_MODEL ve tam ses servisleri yayın aşamasında tamamlanacak. docs/COOLIFY_TASTETRIP_PLAN.md güncel.
