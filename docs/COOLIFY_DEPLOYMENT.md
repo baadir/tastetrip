@@ -36,3 +36,6 @@ Kaynaklar: [Coolify uygulamalar](https://coolify.io/docs/applications/), [health
 
 ## Restoran rezervasyonu servisleri (22 Ekim 2026)
 Güncel compose.yaml üç servis çalıştırır: tastetrip (web), voice-gateway (8081), reservation-worker (port yok). Web ve worker aynı tastetrip-data volume'unu paylaşır. Gateway için ayrı HTTPS/WSS domain tanımlayın; APP_ORIGIN web domain'i, VOICE_PUBLIC_URL gateway domain'i olsun. İç bağlantılar RESERVATION_WEB_URL=http://tastetrip:8080 ve VOICE_GATEWAY_INTERNAL_URL=http://voice-gateway:8081. Üç serviste aynı VOICE_MONITOR_TOKEN ve ilgili sağlayıcı runtime secrets gereklidir; sırları repoya koymayın. Üretim Compose sabit numaralı demo düğmelerini kapatır. Ayrıntı/ilk sürüm sınırları RESERVATION_IMPLEMENTATION.md. Bu dosya güncellemesi yayın veya ARM64 çalışma testi değildir.
+
+## 28 Ekim 2026 — Somut Coolify kaynağı
+Tastetrip projesi ve GitHub main/Dockerfile web kaynağı oluşturuldu. Güncel adres, storage, runtime ve aşamalı üç servis planı COOLIFY_TASTETRIP_PLAN.md içinde. Bu hazırlıkta Deploy yapılmadı; eski örnek domain anlatımı tarihsel/genel rehberdir.

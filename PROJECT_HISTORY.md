@@ -4,6 +4,8 @@
 
 ## Güncel durum
 
+28 Ekim D-034/H-074: Proje github.com/baadir/tastetrip main dalına yüklendi. Coolify Tastetrip/production web kaynağı, HTTPS tastetrip.bahadirciftci.work domaini, Dockerfile/8080, kalıcı /app/data volume ve yedi sır olmayan runtime değişkeni kaydedildi. Deploy başlatılmadı; API sırları/LLM_MODEL ve tam ses servisleri yayın aşamasında tamamlanacak. docs/COOLIFY_TASTETRIP_PLAN.md güncel.
+
 26 Ekim D-033/H-071: Deneyimin bütünü tek konuşma akışında; ayrı açılış/yan menü/form ekranları kaldırıldı. Uçuş ve rezervasyon bilgileri DeepSeek ile konuşmadan alınır; rota, tercih, içerik, güvenli giriş, listeler ve canlı görüşme aynı konuşmada karttır. 117 test; ayrı QA DB ile canlı rezervasyon taslağı/onay kapısı ve uçuş sonucu görüldü. docs/ux/10-complete-conversation.md güncel. Gerçek telefon/deploy yok.
 
 26 Ekim D-032/H-070: Ana deneyim sohbet merkezli. DeepSeek açık genel tercihleri mevcut şema üzerinden atomik olarak kullanıcı/ziyaretçi profiline kaydeder; tek seyahat istekleri ayrı. 110 test ve ayrı QA DB ile canlı sohbet→Qloo rota/reload kontrolü var. docs/ux/09-chat-first-journey.md güncel. Rezervasyon/uşuş ayrıntı formları korunur; deploy yapılmadı.
@@ -783,3 +785,19 @@ Bir karar değiştiğinde önceki kaydı yeniden yazmak yerine yeni kayıtta “
 - app/static/chat.js gönderilen mesajı yanıt beklenirken hemen konuşmada gösterir. Hata halinde metin/pending kimliği korunur; kimlik değişiminde eski bekleyen mesaj temizlenir. Başarısız mesaj başarı gibi işaretlenmez.
 - Kullanıcının kutudaki metni yenilemede korundu, Gönder üzerinden gerçekten gönderildi. Tarayıcıda anında Gönderiliyor durumu, ardından asistan yanıtı ve Tempo kayıt makbuzu görüldü; giriş alanı temizlendi. Ana profil yalnız kullanıcının gönderilmesini istediği açık tercih doğrultusunda değişti; sentetik tercih eklenmedi. artifacts/ux/chat-send-fixed-2026-10-26.png.
 - 119 unittest geçti; 17 chat/task testi içinde yeni rahat tempo regresyonu ve geçersiz model tercihinde profil koruması var. JS sözdizimi geçti. Web8080 son kodla yeniden başlatıldı; telefon veya deploy yapılmadı.
+
+
+### D-034 — GitHub deposu ve Coolify proje/domain hazırlığı
+- Tarih: 27 Ekim 2026 kullanıcı talimatı; hazırlık 28 Ekim'e geçti. Kaynak: Mevcut projeyi https://github.com/baadir/tastetrip.git deposuna yükleme, Coolify'da yeni Tastetrip projesi, tastetrip.bahadirciftci.work domaini ve bu depodan deployment planı.
+- Kabul edilen hedef aynı Coolify/CAX21 yönüdür; yeni platforma geçiş değil. Uygulama kaynağı GitHub main ve mevcut Dockerfile'dır. Üç servisli tam rezervasyon yapısı korunur; web-only konfigürasyon tam sesli rezervasyon yayını sayılmaz. Kullanıcı bu turda belirli bir telefon araması istemedi.
+
+### H-074 — Kaynak yükleme, Coolify konfigürasyonu ve dağıtım planı
+- Tarih: 27–28 Ekim 2026. Yerel klasör başlangıçta Git deposu değildi; GitHub baadir/tastetrip boş ve PUBLIC olarak doğrulandı. main oluşturuldu, origin bağlandı, 129 dosyalı ilk commit d4d4d52 başarıyla push edildi. Mevcut GitHub geçmişi ezilmedi/force push yapılmadı. Dosya sistemi ownership kaydı olmadığı için Git güvenli dizin ayarı yalnız komut bazında verildi; global koruma değiştirilmedi.
+- .gitignore artifacts, log ve SQLite dosyaları için genişletildi. .env, data, .venv, ses/görsel artifact'lar dışarıda. Stage dosyaları mevcut yerel anahtar/token değerleri ve yaygın key kalıplarına karşı tarandı; 0 eşleşme. Kişisel yerel DB/hesap/sohbet kayıtları ve API sırları GitHub'a yüklenmedi. Repository görünürlüğü public olarak korundu.
+- Coolify'da Tastetrip projesi dy0g44moqkbcxsshesm6k6xl ve production ortamı wugoylfk2w7x1jzujumrk9na oluşturuldu. Yeni web uygulaması wpsrxqjtiwj8w64igmghpk4x, public Git kaynağı https://github.com/baadir/tastetrip, main, Dockerfile, base /, /Dockerfile ve port8080 olarak kaydedildi. HTTPS domain https://tastetrip.bahadirciftci.work. Mevcut başka proje veya domain ayarına müdahale edilmedi.
+- Named volume wpsrxqjtiwj8w64igmghpk4x-tastetrip-data → /app/data oluşturuldu; Source Path boş, Docker volume. Gerçek build sonrası UID10001 yazma ve redeploy kalıcılığı henüz test edilmedi.
+- Yedi sır olmayan değişken Coolify'da runtime-only kaydedildi: APP_ORIGIN, COOKIE_SECURE, DATA_DIR, PORT, DISABLE_DEMO_CALLS, LLM_BASE_URL, QLOO_API_URL. 7 buildtime checkbox false, 7 runtime true görüldü. Qloo/DeepSeek/Aviasales/Twilio/Deepgram/ElevenLabs sırları aktarılmadı; LLM_MODEL ve gizli runtime alanları yayın öncesi tamamlanmalı.
+- UI genel konfigürasyon ilk fill girişlerini kaydetmedi; gerçek klavye olaylarıyla alanlar yeniden girildi ve kalıcılık kontrol edildi. Bu ilk girişler kayıt başarısı sayılmadı. Chrome CDP navigasyon zaman aşımı, mevcut browser/tab üzerinden toparlandı; başka otomasyon mekanizmasına geçilmedi.
+- Mevcut 119 unittest geçti. Yerel Docker daemon kapalı olduğu için container build yapılmadı. DNS sorgusunda domain Cloudflare A/AAAA edge adreslerine çözülüyor; bu, origin eşleşmesi veya TLS sertifikası doğrulaması sayılmaz. Deploy düğmesi tıklanmadı, uygulama Exited ve henüz canlı değil. GitHub App/webhook kurulumu yapılmadı; otomatik push→deploy doğrulanmış değildir.
+- docs/COOLIFY_TASTETRIP_PLAN.md web yayın adımları, runtime sırları, DNS/TLS, volume/redeploy/yedek, tek Compose içinde paylaşılan veri ve gateway/worker geçiş planını kaydeder. Ek gateway domaini kullanıcı adına atanmadı. Docker/ARM64 çalışma ve gerçek telefon testi sonraki yayın kontrolüdür.
+- Coolify: https://panel.bahadirciftci.work/project/dy0g44moqkbcxsshesm6k6xl/environment/wugoylfk2w7x1jzujumrk9na/application/wpsrxqjtiwj8w64igmghpk4x . Kaynak: https://github.com/baadir/tastetrip . Sır/tam env içeriği geçmişe yazılmadı.
