@@ -53,3 +53,7 @@ Profil değişimi, sohbet değişimi, hata ve yeniden gönderim kuralları UX09'
 - Son test sayısı, responsive ölçümü ve görsel kaydı PROJECT_HISTORY H-071'de tutulur. Gerçek telefon veya Coolify/ARM64 yayını bu UI çalışmasının doğrulaması değildir. Bütün doğal dil ifadelerinin doğru anlaşılması garanti edilmez.
 
 Kullanıcı seçimleri sohbet kartlarında hâlâ buton/checkbox ve kanıt satırı seçimi gibi kontroller içerir. Bunlar ayrı sayfa veya uzun bilgi toplama formu değildir; açık kontrol gerektiren kararlar konuşmanın içinde kalır.
+
+
+### 28 Ekim 2026 — D-035: Karşılama ve sohbet dili
+İlk ekran ve karşılama İngilizcedir. Asistan son kullanıcı mesajının dilinde yanıt verir; açık dil değişikliği isteği önceliklidir. Belirsiz kısa mesajlarda önceki konuşma dili, ilk temasta İngilizce kullanılır. Mesaj dili native/altyazı tercihini otomatik değiştirmez. Eski konuşmalar yeniden çevrilmez. Yardımcı işlem kartlarının tam yerelleştirmesi ayrıca ele alınacaktır.

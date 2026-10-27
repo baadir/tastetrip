@@ -815,3 +815,9 @@ Bir karar değiştiğinde önceki kaydı yeniden yazmak yerine yeni kayıtta “
 - Docker image build tamamlandı, yeni container ilk healthcheck denemesinde başarılı oldu; rolling update tamamlandı ve UI Deployment is Finished / Running (healthy) gösterdi.
 - HTTPS https://tastetrip.bahadirciftci.work/ tarayıcıda sertifika uyarısı olmadan sohbet arayüzünü açtı. /health yanıtı status=ok doğrulandı. Kanıtlar artifacts/deployment/tastetrip-live-2026-10-28.png ve coolify-deployed-2026-10-28.png.
 - API anahtar değerleri okunmadı/aktarılmadı; canlı sağlayıcı sohbet/rota/uçuş, kayıt-redeploy kalıcılığı ve gateway/worker telefon akışı bu turda test edilmedi. Web yayını doğrulandı; tüm ürün entegrasyonları doğrulanmış sayılmaz. Gerçek telefon araması yapılmadı.
+
+
+### D-035 / H-077 — İngilizce karşılama, mesaj dilinde sohbet
+- Tarih: 28 Ekim 2026. Kullanıcı girişte tamamen İngilizce karşılanmayı, sonrasında yazdığı dilde yanıt almayı istedi. Önceki Türkçe açılış bu kararla değişir; tam sohbet deneyimi D-033 korunur.
+- İlk ve geri dönen ziyaretçi karşılaması, görünür açılış kısa yolları, öneri mesajları, composer/erişilebilir etiketler ve açıklama İngilizce yapıldı. DeepSeek reply dili son mesajı ve açık dil isteğini izler; belirsiz kısa mesaj önceki konuşma dilini korur, başlangıç varsayılanı İngilizcedir. Ana dil/altyazı alanı mesaj dilinden tahmin edilmez. Canonical profil enumları değiştirilmedi.
+- Ayrı geçici DB ile gerçek DeepSeek testinde İngilizce → Türkçe → Fransızca üç tur 200 ve beklenen dilde yanıt verdi. İlk denemede Türkçe prompt etkisi görüldü, ana prompt İngilizce düzenlendikten sonra tekrar doğrulandı. 119 unittest ve iki JS sözdizimi kontrolü geçti. Kayıtlı eski mesajlar çevrilmez; yardımcı işlem kartlarının tam yerelleştirilmesi bu değişiklikte yapılmadı.

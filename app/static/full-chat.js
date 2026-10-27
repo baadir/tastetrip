@@ -6,7 +6,7 @@ const originalBusy=busy;busy=async function(button,action,label='Hazırlanıyor�
 function lastTurn(){return [...conversation.messages].reverse().find(m=>m.role==='user')?.turn_id||null;}
 function reflowChatTools(){
  if(!fullChatReady)return;
- if(conversation.messages.length){const suggestions=$('chat-experience').querySelector('.chat-suggestions');suggestions.innerHTML=['Rotamı göster','Uçuş bulmak istiyorum','Tercihlerimi göster'].map(text=>`<button type="button" data-prompt="${text}">${text}</button>`).join('');}
+ if(conversation.messages.length){const suggestions=$('chat-experience').querySelector('.chat-suggestions');suggestions.innerHTML=['Show my itinerary', 'Find flights', 'Show my preferences'].map(text=>`<button type="button" data-prompt="${text}">${text}</button>`).join('');}
  for(const card of chatCards){
   const index=card.turn?conversation.messages.findIndex(m=>m.turn_id===card.turn):-1;
   const target=index>=0?$('chat-messages').querySelector(`[data-message-index="${index+1}"] .chat-bubble`):$('chat-messages').querySelector('.chat-assistant .chat-bubble');
@@ -116,10 +116,10 @@ openMenu=function(stopId){const stop=getStop(stopId);if(!stop||!safeURL(stop.men
 window.addEventListener('chat-rendered',reflowChatTools);
 window.addEventListener('DOMContentLoaded',()=>{
  fullChatReady=true;document.body.classList.add('full-chat');conversationNodes.route=$('route-area');conversationNodes.reservations=$('reservation-list');
- const header=document.createElement('header');header.className='conversation-header';header.innerHTML='<a class="brand" href="/">taste<span>trip</span></a><span>Seninle şekillenen yolculuk.</span><div id="conversation-shortcuts"></div>';
+ const header=document.createElement('header');header.className='conversation-header';header.innerHTML='<a class="brand" href="/">taste<span>trip</span></a><span>A journey shaped around you.</span><div id="conversation-shortcuts"></div>';
  $('chat-experience').prepend(header);
- const shortcuts=$('conversation-shortcuts');for(const [label,action] of [['Tercihlerim',showProfileInChat],['Rotalarım',showSavedInChat],['Rezervasyonlarım',showReservationsInChat],['Uçuş bul',()=>askInChat('Uçuş bulmak istiyorum. Kalkış, varış ve tarihi konuşarak tamamlayalım.')],['Hesabım',()=>{$('account').click();}],['Yeni sohbet',async()=>confirmNewConversation()],['Sıfır oturum',async()=>{await api('session/new',{});location.reload();}]])chatButton(shortcuts,label,async()=>action());
- const accountButton=[...shortcuts.querySelectorAll('button')].find(b=>b.textContent==='Hesabım');if(accountButton){accountButton.dataset.account='1';accountButton.textContent=state.user?state.user.username+' · Çıkış':'Giriş yap';}
+ const shortcuts=$('conversation-shortcuts');for(const [label,action] of [['My preferences',showProfileInChat],['My trips',showSavedInChat],['My reservations',showReservationsInChat],['Find flights',()=>askInChat("I would like to find flights. Let us work out the origin, destination and dates.")],['My account',()=>{$('account').click();}],['New chat',async()=>confirmNewConversation()],['Fresh session',async()=>{await api('session/new',{});location.reload();}]])chatButton(shortcuts,label,async()=>action());
+ const accountButton=[...shortcuts.querySelectorAll('button')].find(b=>b.textContent==='My account');if(accountButton){accountButton.dataset.account='1';accountButton.textContent=state.user?state.user.username+' · Sign out':'Sign in';}
  const scroller=document.createElement('div');scroller.id='conversation-scroll';$('chat-messages').before(scroller);scroller.append($('chat-messages'));
  for(const [id,title] of [['auth-dialog','Güvenli hesap adımı'],['taste-import-dialog','Cihaz tercihlerini hesabına taşı'],['reservation-dialog','Rezervasyon görüşmesi']])inlineDialog(id,title);
  // Keep passwords out of the conversation and the model context, even with inline account UI.
@@ -132,6 +132,6 @@ window.addEventListener('DOMContentLoaded',()=>{
  // Navigation buttons from earlier modules now resolve to conversation cards.
  showSaved=showSavedInChat;
  const originalRender=renderReservationList;renderReservationList=function(){originalRender();if(chatCards.some(c=>c.key==='reservation-list'))reflowChatTools();};
- window.addEventListener('taste-identity',()=>{const account=[...$('conversation-shortcuts').querySelectorAll('button')].find(b=>b.dataset.account==='1');if(account)account.textContent=state.user?state.user.username+' · Çıkış':'Giriş yap';const owner=state.user?.id||'visitor';if(fullChatOwner!==owner){fullChatOwner=owner;for(const node of Object.values(conversationNodes))$('legacy-planner').append(node);for(let i=chatCards.length-1;i>=0;i--){const card=chatCards[i];if(card.key?.startsWith('dialog:')){card.element.hidden=true;card.turn=null;const d=card.element.querySelector('dialog');if(d){d.open=false;d.hidden=true;}}else{card.element.remove();chatCards.splice(i,1);}}reflowChatTools();} });
+ window.addEventListener('taste-identity',()=>{const account=[...$('conversation-shortcuts').querySelectorAll('button')].find(b=>b.dataset.account==='1');if(account)account.textContent=state.user?state.user.username+' · Sign out':'Sign in';const owner=state.user?.id||'visitor';if(fullChatOwner!==owner){fullChatOwner=owner;for(const node of Object.values(conversationNodes))$('legacy-planner').append(node);for(let i=chatCards.length-1;i>=0;i--){const card=chatCards[i];if(card.key?.startsWith('dialog:')){card.element.hidden=true;card.turn=null;const d=card.element.querySelector('dialog');if(d){d.open=false;d.hidden=true;}}else{card.element.remove();chatCards.splice(i,1);}}reflowChatTools();} });
  if(state.plan)renderRoute();
 });

@@ -266,3 +266,7 @@ Ayrıntılı kapsam ve doğrulama: docs/ux/09-chat-first-journey.md ve H-070. De
 - AC-15.8: Profil inceleme/düzeltme, listeleme, kayıt, içerik önerisi, aktarım ve canlı görüşme takip kontrolleri konuşma içi kartlardır. Kitap konusu/sevilen eser ve podcast dil seçenekleri korunur.
 - AC-15.9: Kimlik bilgileri yalnız güvenli kartla auth API'sine gider; LLM sohbetine eklenmez. Kaynak/yerel saat kontrolü ve ayrı ücretli arama onayı modelce verilemez.
 Güncel sözleşme: docs/ux/10-complete-conversation.md. Önceki yardımcı form sınırı H-070 tarihsel kaydıdır.
+
+
+### 28 Ekim 2026 — D-035: Karşılama ve sohbet dili
+İlk ekran ve karşılama İngilizcedir. Asistan son kullanıcı mesajının dilinde yanıt verir; açık dil değişikliği isteği önceliklidir. Belirsiz kısa mesajlarda önceki konuşma dili, ilk temasta İngilizce kullanılır. Mesaj dili native/altyazı tercihini otomatik değiştirmez. Eski konuşmalar yeniden çevrilmez. Yardımcı işlem kartlarının tam yerelleştirmesi ayrıca ele alınacaktır.
