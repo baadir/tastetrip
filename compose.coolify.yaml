@@ -40,6 +40,7 @@ services:
       <<: *voice-environment
       VOICE_GATEWAY_HOST: 0.0.0.0
       VOICE_GATEWAY_PORT: '8081'
+      APP_ORIGIN: https://tastetrip.bahadirciftci.work
       RESERVATION_WEB_URL: http://tastetrip:8080
     depends_on:
       tastetrip:
