@@ -846,3 +846,5 @@ Bir karar değiştiğinde önceki kaydı yeniden yazmak yerine yeni kayıtta “
 - Server register boolean doğrulaması ve varsa confirmation eşleşmesi eklendi; eski API kayıt istemcileri korunur. Kullanıcı adı kuralları ve parola uzunluğu hataları ayrıldı. Ana dil/profil aktarımı/rezervasyon onayı değişmedi.
 - 126 unittest geçti (3 yeni kayıt testi), statik JS sözdizimi başarılı. Ayrı artifacts/localization/qa-data DB üzerinde tarayıcıyla mismatch, signup, auto login, bekleyen My trips dönüşü, logout, duplicate, Sign in geçişi doğrulandı. Sentetik hesap yalnız yerel QA ortamındadır; prod hesap/telefon/rezervasyon oluşturulmadı.
 - docs/ux/11-signup-and-signin.md akışı, doğrulama sınırını ve mevcut parola kurtarma/e-posta doğrulama eksikliğini kaydeder. Yayın sonucu aşağıya eklenecek.
+
+- H-079 yayın: 389d185 Coolify x6q4rn2bijpz1z44a5tonm5q Finished ve canlı Sign up/kayıt alanları doğrulandı. Canlı ilk yükleme sırasında anonim kimlik yanıtı açık kayıt kartını kapatabildi; ilk owner değerinin visitor olarak başlatılmasıyla gereksiz kimlik değişimi temizliği kaldırıldı. Son düzeltme JS sürüm v3 ile yayınlanacak.
