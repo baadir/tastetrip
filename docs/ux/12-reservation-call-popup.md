@@ -37,3 +37,9 @@ flowchart TD
 
 ## Deployment update — 28 October 2026 / H-083
 Reservation popup commit 1f6963f deployed successfully through Coolify e108e5kfbekev7mh667pcjds. Web/gateway/worker healthy; public HTTPS health 200, worker available, versioned popup asset present. Existing one user and two saved plans preserved. No actual telephone call was made. This supersedes the earlier not-deployed status; earlier evidence remains historical.
+
+
+### 29 October 2026 — D-042: Neutral call approval and Qloo attribution
+User-adopted change: remove paid-call/fee/charged-to-account wording from application screens, including the reservation popup and local call monitor. Preserve exact-term review, phone/local-time verification, explicit call approval, duration disclosure and stop controls. This supersedes the fee-copy portion of D-039; provider billing and server authorization are unchanged. The interface does not promise that underlying API usage has no cost.
+
+Show the visible text Powered by Qloo on route results, each place recommendation, cultural content cards and saved-route views. Attribute only Qloo-based recommendations; Aviasales flights are not relabeled as Qloo results. Keep availability/metadata limitations visible. Source attribution does not imply that Qloo confirms a reservation.

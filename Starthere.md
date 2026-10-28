@@ -1,5 +1,9 @@
 # Buradan başla
 
+Current UI — D-042/H-090, 29 October 2026: fee wording removed from screens; explicit call approval preserved. Powered by Qloo added to Qloo place/content/route cards. Tests pass; deployment result is recorded at end of PROJECT_HISTORY.md.
+
+Submission complete — H-087, 28 October 2026: after explicit user confirmation, rules/Terms acceptance and Submit project completed. Devpost displayed Project submitted! and SUBMITTED TO Qloo Agentic Hackathon. https://devpost.com/software/tastetrip-concierge. Earlier pending records are historical.
+
 Latest deployment — H-083: D-039 reservation popup is live, commit 1f6963f / Coolify e108e5kfbekev7mh667pcjds finished. Three services healthy, HTTPS health and worker readiness verified; user and two saved plans preserved. No phone call made.
 
 Current update — D-039/H-082 (28 October 2026): reservation verification, paid-call approval and live call use a popup over chat; terminal call summary returns to chat. Implemented and tested locally; not deployed. See docs/ux/12-reservation-call-popup.md.

@@ -1,5 +1,7 @@
 # Qloo Agentic Hackathon — İsterler
 
+28 Ekim 2026 güncel takvim düzeltmesi (H-088): Resmi Schedule artık değerlendirmeyi 2–5 Kasım, kazanan duyurusunu 5 Kasım 2026 15:00 EST / Türkiye saati 23:00 gösteriyor. Ana sayfa da ilk üç finalistin 5 Kasım canlı yayında sunum yapacağını ve kazananın yayında seçileceğini duyuruyor. Aşağıdaki ilk kontroldeki 23 Kasım tarihi tarihsel olup güncel değildir. Kaynaklar: https://qloo.devpost.com/details/dates ve https://qloo.devpost.com/.
+
 Kontrol: 20 Ekim 2026. Aşağıdakiler kaynakların kısa çalışma özetidir; resmi kuralların yerine geçmez.
 
 ## Ürün ve teslim

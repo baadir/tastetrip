@@ -282,3 +282,9 @@ D-035 sonundaki yardımcı kartların daha sonra çevrileceği sınırı kaldır
 
 ### 28 October 2026 — D-039: Reservation call popup
 The explicit user instruction supersedes the reservation/live-call portion of D-033 (including AC-15.8's live-call card surface). Booking details remain conversational; business/phone and local-time verification, separate paid-call approval and live listening/captions/stop controls open in a modal over chat. Closing the modal stops listening and preserves call tracking; an active-call button reopens it. A terminal followed call closes the popup and shows one updating summary card in chat. Completed transcripts/outcome review can be reopened. Existing server approval, digest, ownership and idempotency checks remain unchanged. Local implementation/verification and deployment limits: [Popup contract](docs/ux/12-reservation-call-popup.md). PROJECT_HISTORY D-039/H-082 is the authoritative verification record.
+
+
+### 29 October 2026 — D-042: Neutral call approval and Qloo attribution
+User-adopted change: remove paid-call/fee/charged-to-account wording from application screens, including the reservation popup and local call monitor. Preserve exact-term review, phone/local-time verification, explicit call approval, duration disclosure and stop controls. This supersedes the fee-copy portion of D-039; provider billing and server authorization are unchanged. The interface does not promise that underlying API usage has no cost.
+
+Show the visible text Powered by Qloo on route results, each place recommendation, cultural content cards and saved-route views. Attribute only Qloo-based recommendations; Aviasales flights are not relabeled as Qloo results. Keep availability/metadata limitations visible. Source attribution does not imply that Qloo confirms a reservation.

@@ -9,7 +9,7 @@ function updateCallPopup(){
  const dialog=$('reservation-dialog'),a=reservationUI.attempt;
  const live=!$('reservation-live').hidden&&a;
  $('call-popup-stage').textContent=live?(endedReservations.has(a.status)?'Call details':'3 · Live call'):!$('reservation-review').hidden?'2 · Approve the call':'1 · Verify reservation details';
- $('call-popup-disclosure').textContent=live&&!endedReservations.has(a.status)?'Closing this window stops listening, not the phone call. Use Stop the call to request a stop. You can reopen this window from the call button.':live?'Review the transcript and reservation outcome. Viewing this record does not start another call.':'Review the details before approving a paid phone call. No call starts without your explicit approval.';
+ $('call-popup-disclosure').textContent=live&&!endedReservations.has(a.status)?'Closing this window stops listening, not the phone call. Use Stop the call to request a stop. You can reopen this window from the call button.':live?'Review the transcript and reservation outcome. Viewing this record does not start another call.':'Review the reservation details before approving the call. No call starts without your explicit approval.';
  const reopen=$('call-reopen');
  reopen.hidden=!a||endedReservations.has(a.status)||dialog.open;
  reopen.textContent=a?(callStatusNames[a.status]||'Call in progress')+' · Reopen':'';
