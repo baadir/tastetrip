@@ -848,3 +848,5 @@ Bir karar değiştiğinde önceki kaydı yeniden yazmak yerine yeni kayıtta “
 - docs/ux/11-signup-and-signin.md akışı, doğrulama sınırını ve mevcut parola kurtarma/e-posta doğrulama eksikliğini kaydeder. Yayın sonucu aşağıya eklenecek.
 
 - H-079 yayın: 389d185 Coolify x6q4rn2bijpz1z44a5tonm5q Finished ve canlı Sign up/kayıt alanları doğrulandı. Canlı ilk yükleme sırasında anonim kimlik yanıtı açık kayıt kartını kapatabildi; ilk owner değerinin visitor olarak başlatılmasıyla gereksiz kimlik değişimi temizliği kaldırıldı. Son düzeltme JS sürüm v3 ile yayınlanacak.
+
+- H-079 son yayın: fb14370, Coolify u84bnfwc2q64ss1lxqy8277m Finished. Canlı sayfa yenilendiğinde Sign up ilk tıklamada açık kaldı; Sign in / Sign up ayrı kontrolleri ve username/password/confirmation alanları görüldü. artifacts/deployment/tastetrip-signup-live-2026-10-28.png. Yerel 8080 sunucusu da yeni Python koduyla yeniden başlatıldı; QA 8084 kapatıldı.
