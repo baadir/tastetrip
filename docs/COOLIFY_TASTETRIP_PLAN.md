@@ -75,3 +75,7 @@ Kullanıcı talimatıyla deployment xfb9j6404vtl2cawynbqcz1y başlatılıp tamam
 
 ### 28 Ekim SSH kontrolü — H-080
 Üretim hâlâ web-only. Arama anahtar alanlarının çoğu dolu, fakat ELEVENLABS_VOICE_ID yok. Gateway/worker containerları ve heartbeat yok; VOICE_PUBLIC_URL eski geçici tüneli gösteriyor ve web containerından health bağlantısı başarısız. Reservation start 503 logu doğrulandı. Sadece voice ID eklemek yetmez; yukarıdaki üç servis + ortak volume + kalıcı HTTPS/WSS gateway adımı uygulanmalıdır. Bu incelemede üretim değişikliği/telefon yapılmadı.
+
+
+### 28 Ekim tamamlanan ses dağıtımı — D-038/H-081
+Web-only kaynak aynı uygulamada /compose.coolify.yaml ile üç servise geçirildi. Kalıcı gateway: https://voice-tastetrip.bahadirciftci.work. Coolify parser v5 external volume aliasını yeniden adlandırdığı için veriler korunarak managed ortak volumea taşındı; eski volume/yedek duruyor. Önceki tamamlanmadı kayıtları tarihsel durumu belirtir. Güncel işletim ve doğrulama: docs/VOICE_PRODUCTION_RUNBOOK.md. Gerçek telefon bu kurulum kontrolünün parçası değildir.

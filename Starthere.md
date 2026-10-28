@@ -21,6 +21,8 @@
 
 ## Şimdiki yön
 
+28 Ekim D-038/H-081: Üç servisli Coolify Compose dağıtımı ve kalıcı voice-tastetrip.bahadirciftci.work gateway kuruldu. Veri yedeklenip ortak managed volumea korumalı taşındı; eski volume duruyor. Anna ve runtime bağlantıları tamamlandı. Önce docs/VOICE_PRODUCTION_RUNBOOK.md oku. Gerçek arama yapılmadı.
+
 28 Ekim H-080: SSH üretim kontrolünde web-only yayın, eksik ELEVENLABS_VOICE_ID, olmayan gateway/worker/heartbeat ve erişilemeyen eski geçici tünel doğrulandı; reservation start 503. Tam telefon altyapısı henüz yayınlanmadı. Anahtarlar yalnız var/yok incelendi, arama yapılmadı.
 
 28 Ekim D-037/H-079: Ayrı Sign up, giriş/kayıt modları, parola tekrarı, açık doğrulama ve kayıt sonrası bekleyen işe dönüş eklendi. 126 test; docs/ux/11-signup-and-signin.md. Parola kurtarma henüz yok.
