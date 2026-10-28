@@ -899,3 +899,5 @@ Bir karar değiştiğinde önceki kaydı yeniden yazmak yerine yeni kayıtta “
 - Added repo-tracked screenshots under docs/images: a fresh English welcome screen captured on independent local 8086 with separate QA data, plus existing approval/live popup screenshots explicitly labeled as synthetic simulated UI. Original 8082 conversation was not accessed, personal account/conversation images were not published, and no real calls were made.
 - Verified local Markdown links/assets, code fence pairing, absence of the removed project references in both new documents and git diff whitespace checks. Application code was unchanged; no new full test run or deployment was needed. Prior 126-test result is described as the latest recorded run, not rerun evidence.
 - GitHub push result is recorded below after completion.
+
+- H-084 publication: commit 27c3cd4 pushed successfully to github.com/baadir/tastetrip main, including README, English installation guide and all three screenshot assets. Documentation-only change; no application deployment started.
