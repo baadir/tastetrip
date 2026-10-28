@@ -838,3 +838,11 @@ Bir karar değiştiğinde önceki kaydı yeniden yazmak yerine yeni kayıtta “
 - H-078 son tarama: yerel ses test modülündeki dört kullanıcıya yansıyabilen doğrulama hatası da İngilizceye çevrildi; Türkçe gerçek telefon senaryosu/ses metinleri çok dilli özellik olarak korundu.
 
 - H-078 son yayın: aa82c57 Coolify vu7immpfme41js9tru63xb9l üzerinden Finished doğrulandı; ses testi hataları için 8 ilgili test geçti. Tam ürün UI düzeltmesi ve önceki canlı hata kartı kanıtı geçerlidir.
+
+
+### D-037 / H-079 — Ayrı Sign up ve kayıt akışı incelemesi
+- Tarih: 28 Ekim 2026. Kullanıcı ayrı kayıt butonu ve kayıt sürecinin gözden geçirilmesini istedi. Önceki checkbox içindeki kayıt seçimi, ayrı Sign in/Sign up kart modlarıyla değiştirildi. Tek sohbet ve işlem anında giriş kararı korunur.
+- Username/parola/parola tekrarı, açık kurallar, göster/gizle, iki mod arasında geçiş, kayıt sonrası otomatik giriş ve bekleyen işe dönüş uygulandı. Hesap açıkken Sign up gizlenir, çıkışta geri gelir. Sonraki veri yenilemesi başarısızsa başarılı kayıt yanlışlıkla başarısız gösterilmez. Parola/confirmation sohbet veya LLM verisi değildir.
+- Server register boolean doğrulaması ve varsa confirmation eşleşmesi eklendi; eski API kayıt istemcileri korunur. Kullanıcı adı kuralları ve parola uzunluğu hataları ayrıldı. Ana dil/profil aktarımı/rezervasyon onayı değişmedi.
+- 126 unittest geçti (3 yeni kayıt testi), statik JS sözdizimi başarılı. Ayrı artifacts/localization/qa-data DB üzerinde tarayıcıyla mismatch, signup, auto login, bekleyen My trips dönüşü, logout, duplicate, Sign in geçişi doğrulandı. Sentetik hesap yalnız yerel QA ortamındadır; prod hesap/telefon/rezervasyon oluşturulmadı.
+- docs/ux/11-signup-and-signin.md akışı, doğrulama sınırını ve mevcut parola kurtarma/e-posta doğrulama eksikliğini kaydeder. Yayın sonucu aşağıya eklenecek.

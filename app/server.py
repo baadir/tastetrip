@@ -207,9 +207,15 @@ def create_app(test_config=None):
         if not limit(('auth', request.remote_addr), 12, 900):
             return jsonify(error='Too many login attempts. Try again later.'), 429
         data = body()
+        if 'register' in data and type(data['register']) is not bool:
+            raise ValueError('Choose sign in or create account and try again.')
         username, password = str(data.get('username', '')).strip().lower(), data.get('password', '')
-        if not re.fullmatch(r'[a-z0-9_.-]{3,50}', username) or not isinstance(password, str) or not 12 <= len(password) <= 200:
-            raise ValueError('Username must be 3–50 lowercase letters/numbers; password must be at least 12 characters.')
+        if not re.fullmatch(r'[a-z0-9_.-]{3,50}', username):
+            raise ValueError('Use 3–50 letters, numbers, periods, underscores or hyphens for your username.')
+        if not isinstance(password, str) or not 12 <= len(password) <= 200:
+            raise ValueError('Your password must contain 12–200 characters.')
+        if data.get('register') and 'password_confirmation' in data and data['password_confirmation'] != password:
+            raise ValueError('Passwords do not match. Re-enter your confirmation.')
         row = db().execute('SELECT * FROM users WHERE username=?', (username,)).fetchone()
         if data.get('register'):
             if row:

@@ -21,6 +21,8 @@
 
 ## Şimdiki yön
 
+28 Ekim D-037/H-079: Ayrı Sign up, giriş/kayıt modları, parola tekrarı, açık doğrulama ve kayıt sonrası bekleyen işe dönüş eklendi. 126 test; docs/ux/11-signup-and-signin.md. Parola kurtarma henüz yok.
+
 28 Ekim D-036/H-078: Tüm sabit UI/API hata metinleri İngilizce; legacy profil enumları English etiketlenir. Mesaj dili ayrı küçük LLM çağrısıyla yönlendirilir; ana dil korunur. 123 test ve gerçek EN/TR/EN/FR/EN denemesi başarılı.
 
 28 Ekim D-035/H-077: Karşılama ve açılış kontrolleri İngilizce; DeepSeek yanıtları son kullanıcı mesajının dilini takip eder. Ana dil/altyazı tercihi ayrı korunur. Gerçek EN/TR/FR geçişi ve 119 test doğrulandı.

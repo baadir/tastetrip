@@ -274,3 +274,7 @@ Güncel sözleşme: docs/ux/10-complete-conversation.md. Önceki yardımcı form
 
 ### 28 Ekim 2026 — D-036: İngilizce uygulama metinleri
 D-035 sonundaki yardımcı kartların daha sonra çevrileceği sınırı kaldırıldı. Tüm sabit uygulama metinleri, kart/aksiyon etiketleri, erişilebilir açıklamalar ve servis hata mesajları İngilizcedir. Asistan son mesaj dilinde yanıt verir; önceki konuşma dili ancak dil bakımından belirsiz girişlerde kullanılır. Dil yönlendirmesi ayrı hafif LLM çağrısıyla yapılır; native/altyazı tercihini değiştirmez. Kalıcı enum kimlikleri korunur ve İngilizce etiketle gösterilir. Kullanıcı içeriği ve eski sohbet kayıtları silinmez.
+
+
+### 28 Ekim 2026 — D-037: Ayrı kayıt girişi
+Üst barda Sign in yanında Sign up bulunur. Kayıt, sohbet içindeki ayrı modda username/password/confirmation ile yapılır; giriş moduna geçilebilir. Kayıttan sonra otomatik oturum ve bekleyen işe dönüş korunur. Ayrıntı: docs/ux/11-signup-and-signin.md.
