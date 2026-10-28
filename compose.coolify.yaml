@@ -1,0 +1,79 @@
+# Coolify supplies these values at runtime; no credentials belong in this file.
+x-voice-environment: &voice-environment
+  TWILIO_ACCOUNT_SID: ${TWILIO_ACCOUNT_SID}
+  TWILIO_AUTH_TOKEN: ${TWILIO_AUTH_TOKEN}
+  TWILIO_FROM_NUMBER: ${TWILIO_FROM_NUMBER}
+  DEEPGRAM_API_KEY: ${DEEPGRAM_API_KEY}
+  ELEVENLABS_API_KEY: ${ELEVENLABS_API_KEY}
+  ELEVENLABS_VOICE_ID: ${ELEVENLABS_VOICE_ID}
+  LLM_API_KEY: ${LLM_API_KEY}
+  LLM_BASE_URL: ${LLM_BASE_URL}
+  LLM_MODEL: ${LLM_MODEL}
+  VOICE_PUBLIC_URL: ${VOICE_PUBLIC_URL}
+  VOICE_MONITOR_TOKEN: ${VOICE_MONITOR_TOKEN}
+  DISABLE_DEMO_CALLS: 'true'
+
+services:
+  tastetrip:
+    build: .
+    restart: unless-stopped
+    expose: ['8080']
+    environment:
+      <<: *voice-environment
+      APP_ORIGIN: https://tastetrip.bahadirciftci.work
+      COOKIE_SECURE: 'true'
+      DATA_DIR: /app/data
+      PORT: '8080'
+      QLOO_API_URL: ${QLOO_API_URL}
+      QLOO_API_KEY: ${QLOO_API_KEY}
+      AVIASALES_API_TOKEN: ${AVIASALES_API_TOKEN}
+      AVIASALES_PARTNER_ID: ${AVIASALES_PARTNER_ID}
+    volumes:
+      - tastetrip-data:/app/data
+
+  voice-gateway:
+    build: .
+    restart: unless-stopped
+    command: ['python', '-m', 'app.voice_gateway']
+    expose: ['8081']
+    environment:
+      <<: *voice-environment
+      VOICE_GATEWAY_HOST: 0.0.0.0
+      VOICE_GATEWAY_PORT: '8081'
+      RESERVATION_WEB_URL: http://tastetrip:8080
+    depends_on:
+      tastetrip:
+        condition: service_healthy
+    healthcheck:
+      test: ['CMD', 'python', '-c', "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8081/health',timeout=3)"]
+      interval: 15s
+      timeout: 5s
+      start_period: 15s
+      retries: 3
+
+  reservation-worker:
+    build: .
+    restart: unless-stopped
+    command: ['python', '-m', 'app.reservation_worker']
+    environment:
+      <<: *voice-environment
+      DATA_DIR: /app/data
+      VOICE_GATEWAY_INTERNAL_URL: http://voice-gateway:8081
+    volumes:
+      - tastetrip-data:/app/data
+    depends_on:
+      tastetrip:
+        condition: service_healthy
+      voice-gateway:
+        condition: service_healthy
+    healthcheck:
+      test: ['CMD', 'python', '-c', "import sqlite3,time; c=sqlite3.connect('file:/app/data/tastetrip.sqlite3?mode=ro',uri=True); r=c.execute('SELECT at,ready FROM reservation_worker_heartbeat WHERE id=1').fetchone(); c.close(); assert r and r[1] and time.time()-r[0]<45"]
+      interval: 15s
+      timeout: 5s
+      start_period: 60s
+      retries: 3
+
+volumes:
+  tastetrip-data:
+    external: true
+    name: wpsrxqjtiwj8w64igmghpk4x-tastetrip-data
