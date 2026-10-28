@@ -65,3 +65,7 @@ D-035 sonundaki yardımcı kartların daha sonra çevrileceği sınırı kaldır
 
 ### 28 Ekim 2026 — D-037: Ayrı kayıt girişi
 Üst barda Sign in yanında Sign up bulunur. Kayıt, sohbet içindeki ayrı modda username/password/confirmation ile yapılır; giriş moduna geçilebilir. Kayıttan sonra otomatik oturum ve bekleyen işe dönüş korunur. Ayrıntı: docs/ux/11-signup-and-signin.md.
+
+
+### 28 October 2026 — D-039: Reservation call popup
+The explicit user instruction supersedes the reservation/live-call portion of D-033 (including AC-15.8's live-call card surface). Booking details remain conversational; business/phone and local-time verification, separate paid-call approval and live listening/captions/stop controls open in a modal over chat. Closing the modal stops listening and preserves call tracking; an active-call button reopens it. A terminal followed call closes the popup and shows one updating summary card in chat. Completed transcripts/outcome review can be reopened. Existing server approval, digest, ownership and idempotency checks remain unchanged. Local implementation/verification and deployment limits: [Popup contract](12-reservation-call-popup.md). PROJECT_HISTORY D-039/H-082 is the authoritative verification record.

@@ -1,0 +1,10 @@
+.reservation-popup{width:min(860px,calc(100vw - 40px));max-height:calc(100dvh - 40px);margin:auto;padding:26px;border:1px solid #dfe3d7;border-radius:24px;background:#fffefb;color:#263d32;box-shadow:0 24px 100px #15261d44;overflow:auto}
+.reservation-popup:not([open]){display:none}
+.reservation-popup::backdrop{background:#172c2580;backdrop-filter:blur(5px)}
+.reservation-popup h2{font-size:30px;margin:4px 0 8px}.reservation-popup .dialog-top{margin:12px 0 6px}.reservation-popup .close-dialog{min-height:44px;min-width:44px}
+.call-popup-stage{display:inline-block;margin:0;padding:5px 12px;border-radius:20px;background:#edf1e7;color:#49633b;font-size:12px;font-weight:600}
+.reservation-popup .card-actions{flex-wrap:wrap}.reservation-popup button{min-height:42px}.reservation-popup #reservation-transcript{max-height:35vh;overflow:auto}.reservation-popup #chat-reservation-intake .chat-text{white-space:pre-line;padding:16px;background:#f3f4ed;border-radius:14px}
+.reservation-popup .register-label{align-items:flex-start;line-height:1.5}.reservation-popup .register-label input{flex-shrink:0;margin-top:5px}.reservation-popup #reservation-error:empty{display:none}
+.call-reopen{position:fixed;right:22px;top:100px;z-index:20;box-shadow:0 4px 20px #172c2522}.call-reopen[hidden]{display:none}
+.reservation-call-summary .chat-text{white-space:pre-wrap}.reservation-call-summary button{margin:4px 8px 4px 0}
+@media(max-width:600px){.reservation-popup{width:calc(100vw - 16px);max-height:calc(100dvh - 16px);padding:18px;border-radius:18px}.reservation-popup h2{font-size:25px}.reservation-popup .card-actions button{flex:1}.reservation-popup #reservation-transcript{max-height:32vh}.call-reopen{top:112px;right:12px;font-size:12px}}

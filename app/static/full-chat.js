@@ -1,8 +1,8 @@
 'use strict';
-// A single conversation hosts every result and every consequential approval.
+// Conversation hosts travel planning; reservation approval and live calls use a modal.
 const chatCards=[],baseChatAction=chatAction,baseRenderRoute=renderRoute,baseOpenReservation=openReservation,baseOpenAttempt=openReservationAttempt;
 let fullChatReady=false,fullChatOwner=null;const conversationNodes={};
-const originalBusy=busy;busy=async function(button,action,label='Preparing…'){return originalBusy(button,async()=>{const epoch=chatEpoch;try{return await action();}catch(error){if(fullChatReady&&epoch===chatEpoch)sayInChat(error.message+' Your previous selections were kept; you can try again from the relevant card or change it via message.');throw error;}},label);};
+const originalBusy=busy;busy=async function(button,action,label='Preparing…'){return originalBusy(button,async()=>{const epoch=chatEpoch;try{return await action();}catch(error){if(fullChatReady&&epoch===chatEpoch){if(button.closest('#reservation-dialog'))$('reservation-error').textContent=error.message;else sayInChat(error.message+' Your previous selections were kept; you can try again from the relevant card or change it via message.');}throw error;}},label);};
 function lastTurn(){return [...conversation.messages].reverse().find(m=>m.role==='user')?.turn_id||null;}
 function reflowChatTools(){
  if(!fullChatReady)return;
@@ -72,7 +72,7 @@ async function reviewReservationInChat(draft){
   const disclosure=document.createElement('p');disclosure.textContent='Country, call language and time zone are initial suggestions. Check the business/phone match and the restaurant\'s local time from the source link. It is saved to the route calculation. The call transcript and summary are kept for 30 days.';intake.append(disclosure);
   for(const [key,text] of [['phone_verified','I have verified from the source that the phone belongs to this business.'],['timezone_verified','I have verified that the date, time and time zone match the restaurant\'s local time.']]){const label=document.createElement('label');label.className='register-label';const check=document.createElement('input');check.type='checkbox';check.addEventListener('change',()=>{form.elements[key].checked=check.checked;});form.elements[key].checked=false;label.append(check,document.createTextNode(text));intake.append(label);}
   chatButton(intake,'Verify these conditions and prepare the call summary',async()=>{if(!form.elements.phone_verified.checked||!form.elements.timezone_verified.checked)throw new Error('Explicitly confirm the business/phone and local time check.');if(!form.reportValidity())throw new Error('There is a missing or unsupported field. State the correction in chat.');form.requestSubmit($('reservation-prepare'));},true);
-  chatButton(intake,'Correct the conditions in chat',async()=>{sayInChat('What would you like to change? For example, "Make the time 20:00, keep the same day and number of people."');$('chat-input').focus();});
+  chatButton(intake,'Correct the conditions in chat',async()=>{$('reservation-dialog').close('edit');sayInChat('What would you like to change? For example, "Make the time 20:00, keep the same day and number of people."');$('chat-input').focus();});
  });
 }
 async function flightsInChat(draft){
@@ -121,12 +121,13 @@ window.addEventListener('DOMContentLoaded',()=>{
  const shortcuts=$('conversation-shortcuts');for(const [label,action] of [['My preferences',showProfileInChat],['My trips',showSavedInChat],['My reservations',showReservationsInChat],['Find flights',()=>askInChat("I would like to find flights. Let us work out the origin, destination and dates.")],['My account',()=>{$('account').click();}],['Sign up',()=>openAuth('signup')],['New chat',async()=>confirmNewConversation()],['Fresh session',async()=>{await api('session/new',{});location.reload();}]])chatButton(shortcuts,label,async()=>action());
  const accountButton=[...shortcuts.querySelectorAll('button')].find(b=>b.textContent==='My account');if(accountButton){accountButton.dataset.account='1';accountButton.textContent=state.user?state.user.username+' · Sign out':'Sign in';}
  const signupButton=[...shortcuts.querySelectorAll('button')].find(b=>b.textContent==='Sign up');if(signupButton){signupButton.dataset.signup='1';signupButton.hidden=!!state.user;signupButton.classList.add('signup-shortcut');}
+ setupReservationModal();
  const scroller=document.createElement('div');scroller.id='conversation-scroll';$('chat-messages').before(scroller);scroller.append($('chat-messages'));
- for(const [id,title] of [['auth-dialog','Secure account step'],['taste-import-dialog','Move device preferences to your account'],['reservation-dialog','Reservation conversation']])inlineDialog(id,title);
+ for(const [id,title] of [['auth-dialog','Secure account step'],['taste-import-dialog','Move device preferences to your account']])inlineDialog(id,title);
  // Keep passwords out of the conversation and the model context, even with inline account UI.
  $('taste-dialog').showModal=showProfileInChat;
  $('chat-profile').onclick=showProfileInChat;
- $('reservation-edit').addEventListener('click',()=>{ $('reservation-form').hidden=true;$('reservation-review').hidden=true;if($('chat-reservation-intake'))$('chat-reservation-intake').hidden=true;sayInChat('What would you like to change in the reservation terms? You can tell me in a message.');$('chat-input').focus();});
+ $('reservation-edit').addEventListener('click',()=>{ $('reservation-dialog').close('edit');$('reservation-form').hidden=true;$('reservation-review').hidden=true;if($('chat-reservation-intake'))$('chat-reservation-intake').hidden=true;sayInChat('What would you like to change in the reservation terms? You can tell me in a message.');$('chat-input').focus();});
  new MutationObserver(()=>{if(!$('reservation-review').hidden&&$('chat-reservation-intake'))$('chat-reservation-intake').hidden=true;}).observe($('reservation-review'),{attributes:true,attributeFilter:['hidden']});
  const oldShow=show;show=function(view){oldShow('discover');};
  // Navigation buttons from earlier modules now resolve to conversation cards.

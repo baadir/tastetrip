@@ -1,5 +1,7 @@
 # Buradan başla
 
+Current update — D-039/H-082 (28 October 2026): reservation verification, paid-call approval and live call use a popup over chat; terminal call summary returns to chat. Implemented and tested locally; not deployed. See docs/ux/12-reservation-call-popup.md.
+
 **Önce [PROJECT_HISTORY.md](PROJECT_HISTORY.md) dosyasını oku, sonra aksiyon al.** Bu sıra her yeni oturumda, görevde ve bağlam yenilendiğinde geçerlidir.
 
 ## Çalışmaya başlamadan önce

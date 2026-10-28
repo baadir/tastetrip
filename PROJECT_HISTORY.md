@@ -1,5 +1,7 @@
 # TasteTrip Concierge — Project History
 
+Current update — D-039/H-082 (28 October 2026): reservation verification, paid-call approval and live call use a popup over chat; terminal call summary returns to chat. Implemented and tested locally; not deployed. See docs/ux/12-reservation-call-popup.md.
+
 İlk kayıt: 20 Ekim 2026. Tarihler Europe/Istanbul bağlamındadır.
 
 ## Güncel durum
@@ -870,3 +872,13 @@ Bir karar değiştiğinde önceki kaydı yeniden yazmak yerine yeni kayıtta “
 
 - H-081 son dağıtım: a961bf9 / x146vgaks490vk2355az9f13 Finished; web/gateway/worker healthy. Prod Origin ile kısa ömürlü imzalı sentetik dinleme tokenı kullanılarak public WSS bağlantısı ve connection/active=false cevabı doğrulandı; yanlış Origin 403. Bu test DBde girişim/rezervasyon yaratmadı.
 - Son web kontrolleri: missing call configuration boş; from number E.164 ve public URL biçimi geçerli; worker_available=true. Yeniden dağıtım sonrasında bir kullanıcı/bir kayıtlı rota korunuyor; reservation_attempts toplamı 0. Sağlayıcı auth/model/voice/STT bağlantıları test edildi, gerçek telefon/TTS ses üretimi veya restoran görüşmesi yapılmadı. Browser yerel sekme kısıtı aşılmadı; doğrulamalar bağımsız sunucu servis/health/WSS kontrolleridir.
+
+
+
+### D-039 / H-082 — Reservation approval and live call popup
+- Date: 28 October 2026. Source: explicit user request. Adopted decision: reservation verification, separate paid-call approval, live audio/captions and stop controls open in a native modal over chat. This supersedes the reservation/live-call portion of D-033; preference collection, booking details and the rest of the product remain conversational. Earlier records are preserved.
+- Implemented in reservation-modal.js/css with the existing reservation API and native dialog. Phone/business and restaurant-local-time checkboxes remain explicit; the model cannot approve them. Closing/Escape disconnects listening, not the phone call; an active-call reopen button is available. No new call endpoint or authorization bypass was added.
+- Polling continues while an active call window is closed, and while the terminal call summary is pending/working. On terminal status the followed call closes the modal, returns focus to the composer and creates one chat summary card. Ready/failed/insufficient/expired summary states and reopening the transcript/outcome review are supported. Unchanged polls do not rebuild the summary card. Unknown call status remains unresolved, not terminal. Owner/attempt guards prevent stale polling responses from replacing another active record.
+- Verified: 126 Python tests passed; changed JS syntax and git diff whitespace checks passed. Independent loopback fixture scripts/call_popup_ui_preview.py uses separate artifacts/call-popup-qa data, empty provider credentials, simulated reservation endpoints and no telephone calls. Browser confirmed unchecked verification rejection, separate unchecked paid-call approval/disabled start, simulated live transcript popup, close/reopen, terminal automatic close/composer focus, pending-to-ready update in one summary card, and reopening a finished record without immediate close; Escape closes it. Screenshots: artifacts/ux/call-popup-approval.png, call-popup-live.png, call-popup-summary.png. Browser viewport override did not take effect (still 1280px); narrow mobile sizing is CSS-defined but was not verified in a real narrow viewport.
+- Boundary: no actual phone call, provider media test or deployment was performed for this change. Original 8082 conversation was not accessed. Backend durable records remain available through My reservations; transient summary cards follow the existing chat-card lifecycle.
+- Affected documents: PRODUCT_REQUIREMENTS.md, docs/ux/10-complete-conversation.md, docs/ux/12-reservation-call-popup.md, docs/RESERVATION_IMPLEMENTATION.md, Starthere.md. Next: deploy when requested; validate a real authorized call and narrow mobile viewport separately.
