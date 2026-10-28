@@ -21,6 +21,8 @@
 
 ## Şimdiki yön
 
+28 Ekim H-080: SSH üretim kontrolünde web-only yayın, eksik ELEVENLABS_VOICE_ID, olmayan gateway/worker/heartbeat ve erişilemeyen eski geçici tünel doğrulandı; reservation start 503. Tam telefon altyapısı henüz yayınlanmadı. Anahtarlar yalnız var/yok incelendi, arama yapılmadı.
+
 28 Ekim D-037/H-079: Ayrı Sign up, giriş/kayıt modları, parola tekrarı, açık doğrulama ve kayıt sonrası bekleyen işe dönüş eklendi. 126 test; docs/ux/11-signup-and-signin.md. Parola kurtarma henüz yok.
 
 28 Ekim D-036/H-078: Tüm sabit UI/API hata metinleri İngilizce; legacy profil enumları English etiketlenir. Mesaj dili ayrı küçük LLM çağrısıyla yönlendirilir; ana dil korunur. 123 test ve gerçek EN/TR/EN/FR/EN denemesi başarılı.

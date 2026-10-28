@@ -71,3 +71,7 @@ Sağlayıcı anahtarları, LLM_MODEL ve ses bağlantısı için 12 boş giriş a
 
 ### 28 Ekim ilk yayın — H-076
 Kullanıcı talimatıyla deployment xfb9j6404vtl2cawynbqcz1y başlatılıp tamamlandı. main/e55842e build başarılı; Running (healthy), HTTPS ana sayfa ve /health status=ok görüldü. Önceki deploy başlatılmadı kayıtları tarihsel durumu belirtir. Sağlayıcı işlevleri, redeploy veri kalıcılığı ve ses gateway/worker yayını henüz uçtan uca doğrulanmadı.
+
+
+### 28 Ekim SSH kontrolü — H-080
+Üretim hâlâ web-only. Arama anahtar alanlarının çoğu dolu, fakat ELEVENLABS_VOICE_ID yok. Gateway/worker containerları ve heartbeat yok; VOICE_PUBLIC_URL eski geçici tüneli gösteriyor ve web containerından health bağlantısı başarısız. Reservation start 503 logu doğrulandı. Sadece voice ID eklemek yetmez; yukarıdaki üç servis + ortak volume + kalıcı HTTPS/WSS gateway adımı uygulanmalıdır. Bu incelemede üretim değişikliği/telefon yapılmadı.
