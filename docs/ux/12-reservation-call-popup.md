@@ -33,3 +33,7 @@ flowchart TD
 ## Evidence and limits
 
 126 Python tests passed. Isolated 8085 synthetic fixture exercised verification denial, separate approval, simulated live text, close/reopen, terminal return, pending/ready summary and transcript recovery. No real calls were made. Screenshots are in artifacts/ux/call-popup-*.png. The viewport override remained 1280px, so actual narrow mobile rendering remains unverified. This change has not been deployed.
+
+
+## Deployment update — 28 October 2026 / H-083
+Reservation popup commit 1f6963f deployed successfully through Coolify e108e5kfbekev7mh667pcjds. Web/gateway/worker healthy; public HTTPS health 200, worker available, versioned popup asset present. Existing one user and two saved plans preserved. No actual telephone call was made. This supersedes the earlier not-deployed status; earlier evidence remains historical.

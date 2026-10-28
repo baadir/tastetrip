@@ -1,5 +1,7 @@
 # Buradan başla
 
+Latest deployment — H-083: D-039 reservation popup is live, commit 1f6963f / Coolify e108e5kfbekev7mh667pcjds finished. Three services healthy, HTTPS health and worker readiness verified; user and two saved plans preserved. No phone call made.
+
 Current update — D-039/H-082 (28 October 2026): reservation verification, paid-call approval and live call use a popup over chat; terminal call summary returns to chat. Implemented and tested locally; not deployed. See docs/ux/12-reservation-call-popup.md.
 
 **Önce [PROJECT_HISTORY.md](PROJECT_HISTORY.md) dosyasını oku, sonra aksiyon al.** Bu sıra her yeni oturumda, görevde ve bağlam yenilendiğinde geçerlidir.

@@ -38,3 +38,7 @@ The user must review a fresh reservation summary and explicitly approve a real c
 ## Verified deployment
 
 Application code/config commit `a961bf9`; Coolify deployment `x146vgaks490vk2355az9f13` finished. All three services healthy. Production options report `worker_available=true`, all required call fields present with valid number/URL format, provider authentication checks passed, and an authorized synthetic live-listening WSS connection succeeded. Wrong-Origin and unsigned Twilio connections were rejected. After redeployment, the existing user and saved itinerary counts were unchanged. Zero outbound attempts were created. Actual phone conversation quality remains to be tested through explicit user approval.
+
+
+## Deployment update — 28 October 2026 / H-083
+Reservation popup commit 1f6963f deployed successfully through Coolify e108e5kfbekev7mh667pcjds. Web/gateway/worker healthy; public HTTPS health 200, worker available, versioned popup asset present. Existing one user and two saved plans preserved. No actual telephone call was made. This supersedes the earlier not-deployed status; earlier evidence remains historical.
