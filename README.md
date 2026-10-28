@@ -126,3 +126,7 @@ The latest recorded full test run passed **126 tests**. Synthetic browser checks
 - Voice calls incur provider charges and require explicit approval. By default, attempts are limited to 10 per user per day and 180 seconds per call; transcripts/summaries are retained for 30 days. These are not a total spending cap.
 
 Keep `.env`, API credentials, and local databases private. They are excluded from version control. See the [installation guide](docs/INSTALLATION.md) for configuration, persistence, and troubleshooting.
+
+## License
+
+TasteTrip application code is available under the [MIT License](LICENSE). Third-party services, libraries, and content remain subject to their respective terms and licenses.

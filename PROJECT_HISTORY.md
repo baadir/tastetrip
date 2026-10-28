@@ -901,3 +901,8 @@ Bir karar değiştiğinde önceki kaydı yeniden yazmak yerine yeni kayıtta “
 - GitHub push result is recorded below after completion.
 
 - H-084 publication: commit 27c3cd4 pushed successfully to github.com/baadir/tastetrip main, including README, English installation guide and all three screenshot assets. Documentation-only change; no application deployment started.
+
+
+### D-041 / H-085 — MIT license approved for hackathon submission
+- Date: 28 October 2026. User explicitly approved publishing TasteTrip under the MIT License after being told it permits use, modification and distribution. Added root LICENSE and README link. Third-party service/content rights are not relicensed.
+- Authenticated Devpost submission 1248249 (TasteTrip Concierge) was verified as DRAFT, initially 3/5 steps complete. Additional info with 20 October start, public demo/repo and built-from-scratch description was saved; 4/5 steps complete. Overview pitch updated to reflect full travel scope. Final rules/Terms acceptance remains unchecked; final submission has not occurred.
