@@ -75,5 +75,5 @@ services:
 
 volumes:
   tastetrip-data:
-    external: true
-    name: wpsrxqjtiwj8w64igmghpk4x-tastetrip-data
+    # Coolify v5 parser prefixes this key with the application UUID.
+    # See the runbook before migrating an existing standalone volume.
